@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-16T10:48:41+00:00",
+  "title": "Design System: Get This Money",
+  "extensions": {
+    "colorMeta": {
+      "page-black": {
+        "role": "neutral",
+        "displayName": "Page Black",
+        "canonical": "oklch(14.1% 0.004 286)",
+        "tonalRamp": [
+          "oklch(15% 0.004 286)",
+          "oklch(25% 0.004 286)",
+          "oklch(35% 0.004 286)",
+          "oklch(47% 0.004 286)",
+          "oklch(60% 0.004 286)",
+          "oklch(72% 0.004 286)",
+          "oklch(84% 0.004 286)",
+          "oklch(95% 0.004 286)"
+        ]
+      },
+      "band-black": {
+        "role": "neutral",
+        "displayName": "Band Black",
+        "canonical": "oklch(17.8% 0.0 90)",
+        "tonalRamp": [
+          "oklch(15% 0.0 90)",
+          "oklch(25% 0.0 90)",
+          "oklch(35% 0.0 90)",
+          "oklch(47% 0.0 90)",
+          "oklch(60% 0.0 90)",
+          "oklch(72% 0.0 90)",
+          "oklch(84% 0.0 90)",
+          "oklch(95% 0.0 90)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "oklch(96.2% 0.011 85)",
+        "tonalRamp": [
+          "oklch(15% 0.011 85)",
+          "oklch(25% 0.011 85)",
+          "oklch(35% 0.011 85)",
+          "oklch(47% 0.011 85)",
+          "oklch(60% 0.011 85)",
+          "oklch(72% 0.011 85)",
+          "oklch(84% 0.011 85)",
+          "oklch(95% 0.011 85)"
+        ]
+      },
+      "cream-muted": {
+        "role": "neutral",
+        "displayName": "Cream Muted",
+        "canonical": "oklch(72.0% 0.015 85)",
+        "tonalRamp": [
+          "oklch(15% 0.015 85)",
+          "oklch(25% 0.015 85)",
+          "oklch(35% 0.015 85)",
+          "oklch(47% 0.015 85)",
+          "oklch(60% 0.015 85)",
+          "oklch(72% 0.015 85)",
+          "oklch(84% 0.015 85)",
+          "oklch(95% 0.015 85)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(246,242,234,.10)",
+        "tonalRamp": [
+          "oklch(15% 0.011 85)",
+          "oklch(25% 0.011 85)",
+          "oklch(35% 0.011 85)",
+          "oklch(47% 0.011 85)",
+          "oklch(60% 0.011 85)",
+          "oklch(72% 0.011 85)",
+          "oklch(84% 0.011 85)",
+          "oklch(95% 0.011 85)"
+        ],
+        "note": "Cream at 10% alpha. 14% and 18% inside the hero card strip. 22% as the secondary button ring on the field."
+      },
+      "purple-button": {
+        "role": "primary",
+        "displayName": "Purple Button",
+        "canonical": "oklch(57.8% 0.247 288)",
+        "tonalRamp": [
+          "oklch(15% 0.2 288)",
+          "oklch(25% 0.2 288)",
+          "oklch(35% 0.2 288)",
+          "oklch(47% 0.2 288)",
+          "oklch(60% 0.2 288)",
+          "oklch(72% 0.2 288)",
+          "oklch(84% 0.2 288)",
+          "oklch(95% 0.2 288)"
+        ]
+      },
+      "field-bright": {
+        "role": "primary",
+        "displayName": "Field Bright",
+        "canonical": "oklch(52.8% 0.277 285)",
+        "tonalRamp": [
+          "oklch(15% 0.2 285)",
+          "oklch(25% 0.2 285)",
+          "oklch(35% 0.2 285)",
+          "oklch(47% 0.2 285)",
+          "oklch(60% 0.2 285)",
+          "oklch(72% 0.2 285)",
+          "oklch(84% 0.2 285)",
+          "oklch(95% 0.2 285)"
+        ]
+      },
+      "field-mid": {
+        "role": "primary",
+        "displayName": "Field Mid",
+        "canonical": "oklch(38.3% 0.191 291)",
+        "tonalRamp": [
+          "oklch(15% 0.191 291)",
+          "oklch(25% 0.191 291)",
+          "oklch(35% 0.191 291)",
+          "oklch(47% 0.191 291)",
+          "oklch(60% 0.191 291)",
+          "oklch(72% 0.191 291)",
+          "oklch(84% 0.191 291)",
+          "oklch(95% 0.191 291)"
+        ]
+      },
+      "field-deep": {
+        "role": "primary",
+        "displayName": "Field Deep",
+        "canonical": "oklch(20.9% 0.085 294)",
+        "tonalRamp": [
+          "oklch(15% 0.085 294)",
+          "oklch(25% 0.085 294)",
+          "oklch(35% 0.085 294)",
+          "oklch(47% 0.085 294)",
+          "oklch(60% 0.085 294)",
+          "oklch(72% 0.085 294)",
+          "oklch(84% 0.085 294)",
+          "oklch(95% 0.085 294)"
+        ]
+      },
+      "lilac-label": {
+        "role": "primary",
+        "displayName": "Lilac Label",
+        "canonical": "oklch(75.4% 0.143 296)",
+        "tonalRamp": [
+          "oklch(15% 0.143 296)",
+          "oklch(25% 0.143 296)",
+          "oklch(35% 0.143 296)",
+          "oklch(47% 0.143 296)",
+          "oklch(60% 0.143 296)",
+          "oklch(72% 0.143 296)",
+          "oklch(84% 0.143 296)",
+          "oklch(95% 0.143 296)"
+        ]
+      },
+      "plum-ink": {
+        "role": "neutral",
+        "displayName": "Plum Ink",
+        "canonical": "oklch(16.1% 0.05 303)",
+        "tonalRamp": [
+          "oklch(15% 0.05 303)",
+          "oklch(25% 0.05 303)",
+          "oklch(35% 0.05 303)",
+          "oklch(47% 0.05 303)",
+          "oklch(60% 0.05 303)",
+          "oklch(72% 0.05 303)",
+          "oklch(84% 0.05 303)",
+          "oklch(95% 0.05 303)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 only. clamp(58px,15.5vw,132px) on phones, clamp(92px,9.4vw,132px) from 760px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Every section h2, balanced wrap."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Hero statement lead and split lead paragraph. 22px from 760px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs and list rows. 18px from 760px. Capped at 56ch to 62ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Section labels in lilac, kicker, brand name, item titles. Buttons use this at 16px."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Figure captions, band small text, footer, strip detail lines. 13px to 14px."
+      }
+    },
+    "shadows": [
+      {
+        "name": "caption-text-shadow",
+        "value": "0 1px 8px rgba(0,0,0,.8)",
+        "purpose": "Text shadow under figure captions over grayscale media. The only shadow on the page."
+      },
+      {
+        "name": "ring-secondary-field",
+        "value": "inset 0 0 0 1px rgba(246,242,234,.22)",
+        "purpose": "Inset ring on the secondary button inside the purple field."
+      },
+      {
+        "name": "ring-secondary-dark",
+        "value": "inset 0 0 0 1px rgba(246,242,234,.10)",
+        "purpose": "Inset ring on the secondary button on the black page."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-house",
+        "value": "cubic-bezier(.23, 1, .32, 1)",
+        "purpose": "Every transition on the page."
+      },
+      {
+        "name": "duration-button",
+        "value": "160ms",
+        "purpose": "Button transform, background-color and opacity."
+      },
+      {
+        "name": "duration-reveal",
+        "value": "700ms",
+        "purpose": "Scroll reveal: opacity 0 to 1, translateY 20px to 0."
+      },
+      {
+        "name": "duration-portrait",
+        "value": "1000ms opacity, 1600ms transform",
+        "purpose": "Portrait settle on load: opacity 0 to .92, scale 1.03 to 1."
+      },
+      {
+        "name": "hero-stagger",
+        "value": "120ms + 70ms per element",
+        "purpose": "Transition delay for [data-reveal] inside the hero card, DOM order."
+      },
+      {
+        "name": "press-scale",
+        "value": "scale(.97)",
+        "purpose": "Button :active."
+      },
+      {
+        "name": "hover-opacity",
+        "value": ".92",
+        "purpose": "Button hover, fine pointer only."
+      },
+      {
+        "name": "reveal-observer",
+        "value": "threshold .1, rootMargin 0 0 -10% 0, once",
+        "purpose": "IntersectionObserver settings for reveals below the card."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desktop",
+        "value": "760px"
+      },
+      {
+        "name": "wide",
+        "value": "1100px"
+      }
+    ],
+    "gradients": [
+      {
+        "name": "hero-field",
+        "value": "radial-gradient(120% 70% at 78% 18%, #6a2cff 0%, #4a1a9e 42%, #1c0b3a 78%, #0d0618 100%)",
+        "purpose": "Hero card ground."
+      },
+      {
+        "name": "hero-fade",
+        "value": "linear-gradient(to bottom, rgba(0,0,0,0) 45%, rgba(9,9,11,.85) 100%)",
+        "purpose": "Overlay on the hero card so its base sinks into page black."
+      }
+    ],
+    "imagery": [
+      {
+        "name": "media-grayscale",
+        "value": "grayscale(1) contrast(1.08)",
+        "purpose": "All photos and video in the image row."
+      },
+      {
+        "name": "portrait-blend",
+        "value": "mix-blend-mode: multiply; opacity .92",
+        "purpose": "Hero portrait into the purple field."
+      },
+      {
+        "name": "portrait-mask-mobile",
+        "value": "linear-gradient(to bottom,#000 50%,transparent 95%) intersect linear-gradient(to right,transparent 0%,#000 22%,#000 82%,transparent 100%)",
+        "purpose": "Edge fade on the portrait under 760px."
+      },
+      {
+        "name": "portrait-mask-desktop",
+        "value": "linear-gradient(to bottom,#000 60%,transparent 98%) intersect linear-gradient(to right,transparent 0%,#000 18%,#000 84%,transparent 100%)",
+        "purpose": "Edge fade on the portrait from 760px."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (on field)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Cream pill on the purple hero card. Day 1 register button.",
+      "html": "<div style=\"padding:24px;background:radial-gradient(120% 70% at 78% 18%,#6a2cff,#4a1a9e 42%,#1c0b3a 78%)\"><button class=\"ds-btn ds-btn-primary\">Register for Day 1</button></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;min-width:210px;border:0;cursor:pointer;border-radius:999px;padding:13px 22px;font-family:Aeonik,system-ui,sans-serif;font-weight:500;font-size:16px;line-height:1.2;white-space:nowrap;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 160ms cubic-bezier(.23,1,.32,1),opacity 160ms cubic-bezier(.23,1,.32,1)}.ds-btn:hover{opacity:.92}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:2px solid #f6f2ea;outline-offset:3px}.ds-btn-primary{background:#f6f2ea;color:#12071f}"
+    },
+    {
+      "name": "Secondary Button (on field)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Cream at 10% with an inset ring, on the purple hero card. Day 2 register button.",
+      "html": "<div style=\"padding:24px;background:radial-gradient(120% 70% at 78% 18%,#6a2cff,#4a1a9e 42%,#1c0b3a 78%)\"><button class=\"ds-btn ds-btn-secondary\">Register for Day 2</button></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;min-width:210px;border:0;cursor:pointer;border-radius:999px;padding:13px 22px;font-family:Aeonik,system-ui,sans-serif;font-weight:500;font-size:16px;line-height:1.2;white-space:nowrap;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 160ms cubic-bezier(.23,1,.32,1),opacity 160ms cubic-bezier(.23,1,.32,1)}.ds-btn:hover{opacity:.92}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:2px solid #f6f2ea;outline-offset:3px}.ds-btn-secondary{background:rgba(246,242,234,.10);color:#f6f2ea;box-shadow:inset 0 0 0 1px rgba(246,242,234,.22)}"
+    },
+    {
+      "name": "Primary Button (dark ground)",
+      "kind": "button",
+      "refersTo": "button-primary-dark-ground",
+      "description": "Purple pill with white text on the black page, inside any .dark-ground section.",
+      "html": "<div style=\"padding:24px;background:#09090b\"><button class=\"ds-btn ds-btn-primary-dark\">Register for Day 1</button></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;min-width:210px;border:0;cursor:pointer;border-radius:999px;padding:13px 22px;font-family:Aeonik,system-ui,sans-serif;font-weight:500;font-size:16px;line-height:1.2;white-space:nowrap;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 160ms cubic-bezier(.23,1,.32,1),opacity 160ms cubic-bezier(.23,1,.32,1)}.ds-btn:hover{opacity:.92}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:2px solid #f6f2ea;outline-offset:3px}.ds-btn-primary-dark{background:#7b4dff;color:#fff}"
+    },
+    {
+      "name": "Secondary Button (dark ground)",
+      "kind": "button",
+      "refersTo": "button-secondary-dark-ground",
+      "description": "Cream at 8% with a hairline ring on the black page.",
+      "html": "<div style=\"padding:24px;background:#09090b\"><button class=\"ds-btn ds-btn-secondary-dark\">Register for Day 2</button></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;min-width:210px;border:0;cursor:pointer;border-radius:999px;padding:13px 22px;font-family:Aeonik,system-ui,sans-serif;font-weight:500;font-size:16px;line-height:1.2;white-space:nowrap;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 160ms cubic-bezier(.23,1,.32,1),opacity 160ms cubic-bezier(.23,1,.32,1)}.ds-btn:hover{opacity:.92}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible{outline:2px solid #f6f2ea;outline-offset:3px}.ds-btn-secondary-dark{background:rgba(246,242,234,.08);color:#f6f2ea;box-shadow:inset 0 0 0 1px rgba(246,242,234,.10)}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "hero-card",
+      "description": "Brand row at the top of the hero card. Logomark, name, date line at right.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\"><svg width=\"26\" height=\"23\" viewBox=\"0 0 26 23\" fill=\"#f6f2ea\"><path d=\"M0 0h26L13 23z\"/></svg>Get This Money</a><small>25 and 26 Sept, on Google Meet</small></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;padding:22px 36px;background:linear-gradient(90deg,#4a1a9e,#6a2cff);border-radius:28px 28px 0 0;font-family:Aeonik,system-ui,sans-serif;color:#f6f2ea}.ds-brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:500;font-size:15px;color:#f6f2ea;white-space:nowrap}.ds-nav small{font-size:14px;color:rgba(246,242,234,.8)}"
+    },
+    {
+      "name": "Proof Band",
+      "kind": "card",
+      "refersTo": "proof-band",
+      "description": "Band black container with a hairline border, a short muted label and four proof items.",
+      "html": "<div class=\"ds-band\"><p class=\"ds-band-lbl\">Where the work comes from</p><ul class=\"ds-band-list\"><li>Over $100K earned<small>as a freelancer</small></li><li>Over $10K in 2026<small>from AI client work</small></li><li>About 160 buyers<small>of my last course</small></li></ul></div>",
+      "css": ".ds-band{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;padding:26px 36px;border-radius:20px;background:#111111;border:1px solid rgba(246,242,234,.10);font-family:Aeonik,system-ui,sans-serif;color:#f6f2ea}.ds-band-lbl{margin:0;font-size:13px;line-height:1.35;color:#a9a49a;max-width:14ch}.ds-band-list{display:flex;justify-content:space-between;gap:20px 32px;margin:0;padding:0;list-style:none}.ds-band-list li{font-weight:500;font-size:15px}.ds-band-list small{display:block;font-weight:400;color:#a9a49a;font-size:13px}"
+    },
+    {
+      "name": "Numbered Strip",
+      "kind": "custom",
+      "refersTo": "hero-card",
+      "description": "Four-item list along the bottom edge of the hero card. Numeral, title, detail line, top hairline.",
+      "html": "<ul class=\"ds-strip\"><li><i>01</i><b>Day 1: Learn how to build AI tools</b><span>Fri 25 Sept, 7 to 9pm WAT</span></li><li><i>02</i><b>Day 2: Learn how to make videos with AI</b><span>Sat 26 Sept, 6 to 8pm WAT</span></li><li><i>03</i><b>Free, live on Google Meet</b><span>Reminders by email, SMS, WhatsApp</span></li><li><i>04</i><b>No code needed</b><span>Bring a laptop. Nothing to install.</span></li></ul>",
+      "css": ".ds-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0 28px;margin:0;padding:0 36px 26px;list-style:none;background:linear-gradient(to bottom,#1c0b3a,#09090b);font-family:Aeonik,system-ui,sans-serif;color:#f6f2ea}.ds-strip li{padding:16px 0 0;border-top:1px solid rgba(246,242,234,.18)}.ds-strip i{display:block;font-style:normal;font-size:12px;color:#c9b3ff;margin-bottom:3px;letter-spacing:.04em}.ds-strip b{display:block;font-weight:500;font-size:15px}.ds-strip span{display:block;font-size:14px;color:rgba(246,242,234,.72);margin-top:1px}"
+    },
+    {
+      "name": "Section Label + Headline",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Lilac label over a bold, tight-tracked h2. Opens every section below the card.",
+      "html": "<div class=\"ds-sec\"><p class=\"ds-label\">Day 1</p><h2 class=\"ds-h2\">Learn how to build AI tools.</h2><p class=\"ds-when\">Friday 25 September, 7 to 9pm WAT</p></div>",
+      "css": ".ds-sec{padding:32px;background:#09090b;font-family:Aeonik,system-ui,sans-serif;color:#f6f2ea}.ds-label{margin:0 0 14px;font-size:15px;font-weight:500;color:#b79bff}.ds-h2{margin:0;font-weight:700;font-size:clamp(34px,7.6vw,60px);line-height:1;letter-spacing:-.03em;text-wrap:balance}.ds-when{margin:10px 0 0;font-weight:500;font-size:16px}"
+    },
+    {
+      "name": "Hairline List",
+      "kind": "custom",
+      "refersTo": "body",
+      "description": "Rows separated by 10% cream hairlines. Used for what you will learn.",
+      "html": "<ul class=\"ds-learn\"><li>How a small AI tool is put together, and which part the AI handles</li><li>How to put code on GitHub without knowing how to code</li><li>How to host it free on Cloudflare, with no server and no card</li></ul>",
+      "css": ".ds-learn{margin:0;padding:0;list-style:none;border-top:1px solid rgba(246,242,234,.10);max-width:62ch;background:#09090b;font-family:Aeonik,system-ui,sans-serif;color:#f6f2ea}.ds-learn li{padding:15px 0;border-bottom:1px solid rgba(246,242,234,.10);font-size:17px;line-height:1.45}"
+    },
+    {
+      "name": "Figure",
+      "kind": "card",
+      "refersTo": "figure",
+      "description": "4:5 grayscale media tile with a caption pinned at the bottom.",
+      "html": "<figure class=\"ds-fig\"><div class=\"ds-fig-media\"></div><figcaption>Favour Yusuf, your instructor</figcaption></figure>",
+      "css": ".ds-fig{position:relative;margin:0;width:240px;border-radius:16px;overflow:hidden;background:#111111;aspect-ratio:4/5;font-family:Aeonik,system-ui,sans-serif}.ds-fig-media{position:absolute;inset:0;background:linear-gradient(160deg,#5a5a5a,#1a1a1a);filter:grayscale(1) contrast(1.08)}.ds-fig figcaption{position:absolute;left:14px;right:14px;bottom:12px;font-size:13px;color:#f6f2ea;text-shadow:0 1px 8px rgba(0,0,0,.8)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Purple Field",
+    "overview": "The page is one person standing inside a colour field. A single rounded card at the top holds the nav, a grayscale portrait multiplied into a purple gradient, the display headline, a short statement, two pill buttons and a four-item numbered strip along the bottom edge. Everything below that card sits on near-black with cream type and hairline dividers. Density is low. Sections breathe at 64px on phones and 104px on desktop, and the type does the work.\n\nPurple lives in the field and on buttons. It never tints the photography and never colours body copy. Section labels use a pale lilac so the hue carries down the page without competing with the buttons. All imagery is grayscale, so the purple field and the purple buttons are the only saturated colour on the screen.\n\nThe build rejects the black funnel page with a tinted headshot in a corner. It also rejects drop shadows, glass panels and gradient text.",
+    "keyCharacteristics": [
+      "One rounded hero card, radius 28px, holding nav, portrait, headline, buttons and strip",
+      "Radial purple field from bright violet at top-right to deep plum, fading to page black at the base",
+      "Cream Aeonik type on near-black, tight display tracking, bold weight for headings only",
+      "Two button grounds: cream on the purple field, purple on the black page",
+      "Cream hairlines at 10 percent as the only divider",
+      "Grayscale photography and video everywhere, the hero portrait blended with multiply",
+      "Motion limited to a portrait settle on load, a staggered hero reveal and scroll reveals"
+    ],
+    "rules": [
+      {
+        "name": "The Two Grounds Rule",
+        "body": "On the purple field the primary button is cream. On the black page the primary button is purple. Purple never sits as a button inside the purple field, and cream never fills a button on black.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lifted Purple Rule",
+        "body": "The brand purple #5722CB is a print and logo value. On screen the button is #7b4dff and the field runs #6a2cff, #4a1a9e, #1c0b3a. Do not reintroduce #5722CB as a fill or text colour on dark ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The Grayscale Image Rule",
+        "body": "Photos and video are grayscale with a small contrast lift (`grayscale(1) contrast(1.08)`). Colour enters through the field and the buttons only.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bold-Is-Heading Rule",
+        "body": "Weight 700 appears on h1 and h2 only. Emphasis inside body copy uses 500 in cream, never bold.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tight-Top Rule",
+        "body": "Negative tracking belongs to display and headline sizes. Nothing at or below 22px is tracked tighter than normal.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Lift Rule",
+        "body": "Surfaces never lift. Hover on a button is an opacity change to 0.92, press is a scale to 0.97. No translateY, no shadow growth, no glow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep every button a 999px pill at min-height 50px with 500-weight 16px text, and keep the `body button.luma-checkout--button` override with `!important`.",
+      "**Do** switch button ground by section: cream fill on the purple field, purple (#7b4dff) fill on black, using `.dark-ground` on the section.",
+      "**Do** use cream at 10% (`rgba(246,242,234,.10)`) for every divider and border on the black page.",
+      "**Do** render all photos and video grayscale, and blend a portrait into the field with `mix-blend-mode: multiply` plus edge masks.",
+      "**Do** set the display and headline at 700 with -0.04em and -0.03em tracking and `text-wrap: balance`.",
+      "**Do** honour `prefers-reduced-motion` by showing everything in place and leaving video paused.",
+      "**Do** keep the page a single inline stylesheet and vanilla script with no libraries."
+    ],
+    "donts": [
+      "**Don't** use the brand purple #5722CB as a fill or text colour on dark ground.",
+      "**Don't** put a purple button inside the purple hero card, or a cream-filled button on the black page.",
+      "**Don't** add box shadows, glass blur, glows or translateY hovers. Hover is opacity 0.92, press is scale 0.97.",
+      "**Don't** tint photography purple or run any image in colour.",
+      "**Don't** use uppercase or letterspaced labels. Labels are 15px, 500 weight, sentence case, in lilac.",
+      "**Don't** use weight 700 below headline size.",
+      "**Don't** introduce a second accent colour. Cream, black and one purple."
+    ]
+  }
+}

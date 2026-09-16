@@ -124,11 +124,11 @@ h2{font-weight:700;font-size:clamp(34px,7.6vw,60px);line-height:1;letter-spacing
 .when{color:var(--ink);font-weight:500;font-size:16px;margin-top:10px}
 
 /* image row */
-.row3{display:grid;gap:12px;margin-top:34px}
+.row3{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:34px}
 .row3 figure{position:relative;border-radius:16px;overflow:hidden;background:var(--bg-2);aspect-ratio:4/5}
-.row3 img,.row3 video{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08)}
-.row3 img.tool{object-position:50% 0;filter:grayscale(1) contrast(1.05) brightness(1.1)}
-.row3 figcaption{position:absolute;left:14px;right:14px;bottom:12px;font-size:13px;color:var(--ink);text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.row3 img,.row3 video{width:100%;height:100%;object-fit:cover;object-position:top}
+.row3 img.tool{object-position:50% 0}
+.row3 figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 12px 12px;font-size:13px;line-height:1.35;color:var(--ink);background:linear-gradient(to top,rgba(9,9,11,.92),rgba(9,9,11,0))}
 
 /* learn list */
 .learn{margin-top:28px;border-top:1px solid var(--line)}
@@ -165,7 +165,7 @@ footer p{margin:0 0 6px}
   :root{--pad:28px}
   body{font-size:18px}
   .card{margin-top:16px;min-height:min(88vh,760px);display:flex;flex-direction:column}
-  .portrait{right:4%;height:108%;top:-2%;-webkit-mask-image:linear-gradient(to bottom,#000 60%,transparent 98%),linear-gradient(to right,transparent 0%,#000 18%,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,#000 60%,transparent 98%),linear-gradient(to right,transparent 0%,#000 18%,#000 84%,transparent 100%)}
+  .portrait{right:4%;height:104%;top:0;-webkit-mask-image:linear-gradient(to bottom,#000 60%,transparent 98%),linear-gradient(to right,transparent 0%,#000 18%,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,#000 60%,transparent 98%),linear-gradient(to right,transparent 0%,#000 18%,#000 84%,transparent 100%)}
   .nav{padding:22px 36px 0}
   .nav small{display:block}
   .hero{flex:1;display:grid;grid-template-columns:minmax(0,640px) 1fr;align-items:end;gap:40px;padding:120px 36px 0}
@@ -185,6 +185,7 @@ footer p{margin:0 0 6px}
   .split{grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
   .split .lead{font-size:22px}
   .row3{grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+  .row3 figcaption{font-size:14px;padding:40px 16px 14px}
   .learn{max-width:62ch}
   .about{grid-template-columns:1fr 1.2fr;gap:60px}
   .details{grid-template-columns:repeat(3,1fr);gap:40px}
@@ -242,22 +243,34 @@ footer p{margin:0 0 6px}
     </div>
     <div data-reveal>
       <p class="lead">I build AI tools, full web apps and marketing videos for founders, using the same tools I will share in these classes.</p>
-      <p>One client this year got both a tool and a video. Those are what you'll see on screen.</p>
+      <p>Here are some of the tools, sites and videos I've built. The Augmentus tool and video are the two you'll see made on screen.</p>
       <div class="cta-row"><button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for Day 1</button></div>
     </div>
   </div>
   <div class="row3" data-reveal>
     <figure>
       <img class="tool" src="assets/augmentus-roi-tool.png" width="1440" height="915" alt="The ROI calculator built for Augmentus" loading="lazy" decoding="async">
-      <figcaption>The ROI tool, live at augmentus-roi-finder.pages.dev</figcaption>
+      <figcaption>AI ROI calculator for Augmentus, a robotics company</figcaption>
     </figure>
     <figure>
       <video src="assets/augmentus-video-loop.mp4" poster="assets/augmentus-video-poster.jpg" muted loop playsinline preload="metadata" aria-label="Nine seconds of the marketing video made for Augmentus"></video>
-      <figcaption>The video for the same client</figcaption>
+      <figcaption>Marketing video for Augmentus</figcaption>
     </figure>
     <figure>
-      <img src="assets/favour-2-gray.jpg" width="900" height="1125" alt="Favour Yusuf" loading="lazy" decoding="async">
-      <figcaption>Favour Yusuf, your instructor</figcaption>
+      <img src="assets/site-hire.jpg" width="960" height="1200" alt="Hire by TrustVerifi, the hiring web app" loading="lazy" decoding="async">
+      <figcaption>Hire by TrustVerifi, a full web app, live at hire.trustverifi.com</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/site-claim.jpg" width="960" height="1200" alt="The free claim-check tool on the TrustVerifi site" loading="lazy" decoding="async">
+      <figcaption>Free AI claim-check tool for TrustVerifi</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/site-wedding.jpg" width="960" height="1200" alt="The wedding website for Kathryn and Samuel" loading="lazy" decoding="async">
+      <figcaption>Wedding website for Kathryn and Samuel</figcaption>
+    </figure>
+    <figure>
+      <video src="assets/trustverifi-video-loop.mp4" poster="assets/trustverifi-video-poster.jpg" muted loop playsinline preload="metadata" aria-label="Nine seconds of the TrustVerifi launch video"></video>
+      <figcaption>Launch video for TrustVerifi</figcaption>
     </figure>
   </div>
 </section>
@@ -349,7 +362,7 @@ footer p{margin:0 0 6px}
   var portrait = document.getElementById('portrait');
   function showPortrait(){ portrait.classList.add('in'); }
   if (portrait.complete) showPortrait(); else portrait.addEventListener('load', showPortrait);
-  var v = document.querySelector('video'); if (v && !reduce) { var pl = v.play(); if (pl && pl.catch) pl.catch(function(){}); }
+  if (!reduce) { document.querySelectorAll('video').forEach(function(v){ var pl = v.play(); if (pl && pl.catch) pl.catch(function(){}); }); }
   var els = document.querySelectorAll('[data-reveal]');
   if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('in'); }); return; }
   var io = new IntersectionObserver(function(entries){
