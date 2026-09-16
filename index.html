@@ -82,6 +82,12 @@ h1 .l>span{display:block}
 .statement span{display:block;margin-top:8px;font-size:15px;line-height:1.5;color:rgba(246,242,234,.75)}
 .ctas{display:grid;gap:10px;margin-top:24px}
 .dates{margin-top:16px;font-size:14px;line-height:1.55;color:rgba(246,242,234,.72);max-width:44ch}
+.cal{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px;font-size:14px;color:rgba(246,242,234,.72)}
+.cal span{width:100%}
+.cal a{display:inline-flex;align-items:center;min-height:36px;padding:7px 14px;border-radius:999px;border:1px solid rgba(246,242,234,.22);color:var(--ink);text-decoration:none;font-weight:500;font-size:14px;transition:background-color 160ms var(--ease),transform 160ms var(--ease)}
+.cal a:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.cal a:hover{background:rgba(246,242,234,.08)}}
+.close-cal{margin-top:18px}
 
 /* buttons: Luma injects its own .luma-checkout--button styles, these win on purpose */
 body button.luma-checkout--button{
@@ -173,6 +179,8 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
   .ctas{grid-template-columns:auto auto;justify-content:start}
   .hero .ctas{grid-column:1;margin-top:26px}
   .dates{grid-column:1;font-size:15px}
+  .cal{grid-column:1}
+  .cal span{width:auto}
   body button.luma-checkout--button{width:auto!important;min-width:210px}
   .band{grid-template-columns:repeat(3,auto);justify-content:space-between;align-items:center;padding:24px 36px}
   section{padding:104px 0}
@@ -204,10 +212,14 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
       <span>I made over $10K this year building AI tools for clients. I'll show you how I do it, step by step, from an empty page to a working link.</span>
     </div>
     <div class="ctas" data-reveal>
-      <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for Day 1</button>
-      <button class="luma-checkout--button secondary" type="button" data-luma-action="checkout" data-luma-event-id="evt-yh6vAPBjduKOTRt">Register for Day 2</button>
+      <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for both classes</button>
     </div>
     <p class="dates" data-reveal>Day 1, Friday 25 September, 7 to 9pm WAT. Day 2, Saturday 26 September, 6 to 8pm WAT. Free. No code needed.</p>
+    <div class="cal" data-reveal>
+      <span>Add each class to your calendar:</span>
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%201%3A%20Learn%20how%20to%20build%20AI%20tools&dates=20260925T180000Z%2F20260925T200000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz&location=Google%20Meet" target="_blank" rel="noopener">Day 1, Fri 25 Sept</a>
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%202%3A%20Learn%20how%20to%20make%20videos%20with%20AI&dates=20260926T170000Z%2F20260926T190000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz&location=Google%20Meet" target="_blank" rel="noopener">Day 2, Sat 26 Sept</a>
+    </div>
   </div>
 </div>
 
@@ -266,7 +278,7 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
     <li>How to find good ideas that you can build tools for</li>
   </ul>
   <div class="cta-row" data-reveal>
-    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for Day 1</button>
+    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for both classes</button>
   </div>
 </section>
 
@@ -284,7 +296,7 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
   </ul>
   <p class="sub" data-reveal>You can attend Day 2 on its own. If you built a tool on Day 1, we make the video for that.</p>
   <div class="cta-row" data-reveal>
-    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-yh6vAPBjduKOTRt">Register for Day 2</button>
+    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for both classes</button>
   </div>
 </section>
 
@@ -306,11 +318,15 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
 </section>
 
 <section class="close dark-ground" id="register">
-  <h2 data-reveal>Register for one, or both.</h2>
+  <h2 data-reveal>Two classes. One registration.</h2>
   <div class="ctas" data-reveal>
-    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for Day 1</button>
-    <button class="luma-checkout--button secondary" type="button" data-luma-action="checkout" data-luma-event-id="evt-yh6vAPBjduKOTRt">Register for Day 2</button>
+    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for both classes</button>
   </div>
+  <div class="cal close-cal" data-reveal>
+      <span>Add each class to your calendar:</span>
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%201%3A%20Learn%20how%20to%20build%20AI%20tools&dates=20260925T180000Z%2F20260925T200000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz&location=Google%20Meet" target="_blank" rel="noopener">Day 1, Fri 25 Sept</a>
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%202%3A%20Learn%20how%20to%20make%20videos%20with%20AI&dates=20260926T170000Z%2F20260926T190000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz&location=Google%20Meet" target="_blank" rel="noopener">Day 2, Sat 26 Sept</a>
+    </div>
 </section>
 
 <footer>
