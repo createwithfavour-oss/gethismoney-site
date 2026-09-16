@@ -11,7 +11,7 @@ Registration buttons use Luma's checkout embed. Event IDs live on the two button
 - Night 1, Fri 25 Sept 2026: `evt-XAeX6PX6wDDRrHP` (https://luma.com/4jb36rp5)
 - Night 2, Sat 26 Sept 2026: `evt-yh6vAPBjduKOTRt` (https://luma.com/g7oyqgko)
 
-Deploy: push to `main`, or from this folder run
+Deploy: pushing to `main` does not deploy on its own. From this folder run
 
 ```
 npx wrangler@4 deploy
