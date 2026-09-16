@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ship with AI. A free two-night live class with Favour Yusuf</title>
+<meta name="description" content="Two free nights on Google Meet, 25 and 26 September. Watch Favour Yusuf build an AI tool from an empty page to a working link, then make the video that markets it.">
+<meta name="theme-color" content="#0B0D12">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="canonical" href="https://gethismoney.xyz/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ship with AI. Free live class, 25 and 26 September">
+<meta property="og:description" content="Watch me build an AI tool from an empty page to a working link, then make the video that markets it. Free, on Google Meet.">
+<meta property="og:url" content="https://gethismoney.xyz/">
+<meta property="og:image" content="https://gethismoney.xyz/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/Aeonik-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/Aeonik-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+  @font-face { font-family: "Aeonik"; src: url("assets/Aeonik-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: "Aeonik"; src: url("assets/Aeonik-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+  @font-face { font-family: "Aeonik"; src: url("assets/Aeonik-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+  :root {
+    --bg: #0B0D12;
+    --bg-2: #11141B;
+    --line: rgba(255, 255, 255, 0.10);
+    --text: #F2F4F7;
+    --muted: #A7AFBC;
+    --accent: #5CC8FF;
+    --accent-ink: #06121A;
+    --radius: 12px;
+    --pad: 20px;
+    --measure: 640px;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Aeonik", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+    padding-left: max(var(--pad), env(safe-area-inset-left));
+    padding-right: max(var(--pad), env(safe-area-inset-right));
+  }
+
+  .wrap { max-width: var(--measure); margin: 0 auto; }
+
+  header.top {
+    display: flex; align-items: center; gap: 12px;
+    padding: 20px 0 8px;
+  }
+  header.top img { width: 30px; height: 26px; display: block; }
+  header.top span { font-weight: 500; font-size: 15px; color: var(--muted); letter-spacing: 0.01em; }
+
+  .hero { padding: 40px 0 36px; }
+  .eyebrow {
+    color: var(--accent); font-weight: 500; font-size: 14px;
+    letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 14px;
+  }
+  h1 {
+    font-weight: 700; font-size: clamp(44px, 12vw, 96px);
+    line-height: 0.95; letter-spacing: -0.03em; margin: 0 0 20px;
+  }
+  .lede { font-size: 19px; line-height: 1.5; margin: 0 0 24px; max-width: 34ch; }
+
+  .dates { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .dates a {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+    padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius);
+    color: var(--text); text-decoration: none; background: var(--bg-2);
+    transition: border-color 160ms ease, transform 120ms ease;
+  }
+  .dates a:hover { border-color: rgba(92, 200, 255, 0.5); }
+  .dates a:active { transform: translateY(1px); }
+  .dates b { font-weight: 500; }
+  .dates small { color: var(--muted); font-size: 15px; }
+
+  .shot { padding: 12px 0 44px; }
+  .shot figure { margin: 0; }
+  .shot img {
+    width: 100%; height: auto; display: block;
+    border-radius: var(--radius); border: 1px solid var(--line);
+  }
+  .shot figcaption { color: var(--muted); font-size: 15px; margin-top: 12px; line-height: 1.5; }
+
+  section.night { padding: 40px 0; border-top: 1px solid var(--line); }
+  section.night h2 {
+    font-weight: 700; font-size: clamp(28px, 7vw, 36px); line-height: 1.1;
+    letter-spacing: -0.02em; margin: 0 0 6px;
+  }
+  .when { color: var(--accent); font-weight: 500; margin: 0 0 20px; font-size: 16px; }
+  section.night p { margin: 0 0 18px; }
+  .learn { margin: 0 0 22px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .learn li { position: relative; padding-left: 22px; color: var(--text); }
+  .learn li::before {
+    content: ""; position: absolute; left: 0; top: 0.62em; width: 10px; height: 2px;
+    background: var(--accent); border-radius: 2px;
+  }
+  .note { color: var(--muted); font-size: 16px; margin: 0 0 22px; }
+
+  .luma-checkout--button, .cta {
+    display: block; width: 100%;
+    appearance: none; border: 0; cursor: pointer;
+    background: var(--accent); color: var(--accent-ink);
+    font: inherit; font-weight: 700; font-size: 18px;
+    padding: 17px 20px; border-radius: var(--radius); text-align: center;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.18);
+    transition: filter 160ms ease, transform 120ms ease;
+  }
+  .luma-checkout--button:hover, .cta:hover { filter: brightness(1.06); }
+  .luma-checkout--button:active, .cta:active { transform: translateY(1px); }
+  .luma-checkout--button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+  section.plain { padding: 36px 0; border-top: 1px solid var(--line); }
+  section.plain h2 { font-weight: 700; font-size: 22px; letter-spacing: -0.01em; margin: 0 0 12px; }
+  section.plain p { margin: 0 0 14px; }
+  section.plain p:last-child { margin-bottom: 0; }
+
+  footer { padding: 28px 0 44px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer p { margin: 0 0 8px; }
+
+  @media (min-width: 720px) {
+    :root { --pad: 32px; }
+    body { font-size: 18px; }
+    .hero { padding: 64px 0 48px; }
+    .lede { font-size: 21px; }
+    .dates { grid-template-columns: 1fr 1fr; }
+    section.night { padding: 56px 0; }
+    .luma-checkout--button, .cta { width: auto; min-width: 320px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <img src="assets/gtm-logomark-white.svg" alt="Get This Money">
+    <span>Get This Money</span>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Free live class, 25 and 26 September</p>
+    <h1>SHIP WITH AI</h1>
+    <p class="lede">Two free nights on Google Meet. Watch me build an AI tool from an empty page to a working link, then make the video that markets it.</p>
+    <ul class="dates">
+      <li><a href="#night-1"><b>Night 1: build an AI tool</b><small>Fri 25 Sept, 7 to 9pm WAT</small></a></li>
+      <li><a href="#night-2"><b>Night 2: make the video</b><small>Sat 26 Sept, 6 to 8pm WAT</small></a></li>
+    </ul>
+  </section>
+
+  <section class="shot">
+    <figure>
+      <img src="assets/augmentus-roi-tool.png" width="1440" height="940" alt="Screenshot of an ROI calculator web tool built for Augmentus, a robotics company" loading="eager" fetchpriority="high">
+      <figcaption>An ROI calculator I built for a client, Augmentus, on the same free stack you'll see on night 1. It takes a plain description of their factory line and returns a savings estimate.</figcaption>
+    </figure>
+  </section>
+
+  <section class="night" id="night-1">
+    <h2>Night 1: Learn how to build AI tools</h2>
+    <p class="when">Friday 25 September, 7 to 9pm WAT</p>
+    <p>I made over $10K this year building AI tools for clients. I'll show you how I build AI-powered tools and web apps, step by step, from an empty page to a working link.</p>
+    <p>By the end of night 1, you'll know:</p>
+    <ul class="learn">
+      <li>How a small AI tool is put together, and which part the AI handles</li>
+      <li>How to put code on GitHub without knowing how to code</li>
+      <li>How to host it free on Cloudflare, with no server and no card</li>
+      <li>How to connect AI to your tool with an API so your users get AI-powered results</li>
+      <li>How to find good ideas that you can build tools for</li>
+    </ul>
+    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Save night 1, Fri 25 Sept</button>
+  </section>
+
+  <section class="night" id="night-2">
+    <h2>Night 2: Learn how to make videos with AI</h2>
+    <p class="when">Saturday 26 September, 6 to 8pm WAT</p>
+    <p>I'll show you how to use AI to create videos that can go viral, look original, and are compelling enough to drive action. I'll make one on screen from start to finish, using software that is free and runs on your laptop.</p>
+    <p>By the end of night 2, you'll know:</p>
+    <ul class="learn">
+      <li>How to create video content that looks real and original, so it doesn't get scrolled past as AI</li>
+      <li>How to make AI voices sound like a person, with the right pace and tone</li>
+      <li>How to make motion graphics and launch videos for a product without a designer</li>
+      <li>How to add captions that match every word, so the video works with the sound off</li>
+      <li>How to do all of it with free software on your laptop, instead of paying for AI video subscriptions</li>
+    </ul>
+    <p class="note">You can attend night 2 on its own. If you built a tool on night 1, we make the video for that.</p>
+    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-yh6vAPBjduKOTRt">Save night 2, Sat 26 Sept</button>
+  </section>
+
+  <section class="plain">
+    <h2>What to bring</h2>
+    <p>A laptop and an idea for something simple. For night 2, any video clip. Nothing to install beforehand. Build along with me or just watch.</p>
+    <p>Both nights are free. There's a paid course after this for people who want to go further. I'll mention it at the end.</p>
+  </section>
+
+  <section class="plain">
+    <h2>Who this is for</h2>
+    <p>Marketers, founders and creators who want to build with AI. You don't need to know how to code.</p>
+  </section>
+
+  <section class="plain">
+    <h2>About me</h2>
+    <p>I'm Favour Yusuf. I build AI tools, full web apps and marketing videos for founders, using the same tools I will share on these calls.</p>
+    <p>I've made over $100K on Upwork as a freelancer, and this year alone I have made over $10K working with clients all over the world using AI.</p>
+  </section>
+
+  <footer>
+    <p>Register and the Google Meet link and reminders come from Luma by email, SMS and WhatsApp.</p>
+    <p>Get This Money, by Favour Yusuf.</p>
+  </footer>
+
+</div>
+
+<script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
+</body>
+</html>
