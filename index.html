@@ -81,7 +81,9 @@ h1 .l>span{display:block}
 .statement b{display:block;font-weight:500;font-size:19px;line-height:1.3;color:var(--ink)}
 .statement span{display:block;margin-top:8px;font-size:15px;line-height:1.5;color:rgba(246,242,234,.75)}
 .ctas{display:grid;gap:10px;margin-top:24px}
-.dates{margin-top:16px;font-size:14px;line-height:1.55;color:rgba(246,242,234,.72);max-width:44ch}
+.note{margin-top:14px;font-size:14px;line-height:1.5;color:rgba(246,242,234,.72);max-width:40ch}
+.dates{margin-top:16px;font-size:14px;line-height:1.6;color:rgba(246,242,234,.78)}
+.dates span{display:block}
 .cal{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px;font-size:14px;color:rgba(246,242,234,.72)}
 .cal span{width:100%}
 .cal a{display:inline-flex;align-items:center;min-height:36px;padding:7px 14px;border-radius:999px;border:1px solid rgba(246,242,234,.22);color:var(--ink);text-decoration:none;font-weight:500;font-size:14px;transition:background-color 160ms var(--ease),transform 160ms var(--ease)}
@@ -97,6 +99,7 @@ body button.luma-checkout--button{
   background:var(--ink)!important;color:#12071f!important;box-shadow:none!important;
   transition:transform 160ms var(--ease),opacity 160ms var(--ease);
 }
+body button.luma-checkout--button[hidden]{display:none!important}
 body button.luma-checkout--button.secondary{background:rgba(246,242,234,.10)!important;color:var(--ink)!important;box-shadow:inset 0 0 0 1px rgba(246,242,234,.22)!important}
 .dark-ground button.luma-checkout--button{background:var(--purple)!important;color:#fff!important}
 .dark-ground button.luma-checkout--button.secondary{background:rgba(246,242,234,.08)!important;color:var(--ink)!important;box-shadow:inset 0 0 0 1px var(--line)!important}
@@ -106,7 +109,7 @@ body button.luma-checkout--button:focus-visible{outline:2px solid var(--ink);out
 
 /* ===== proof band ===== */
 .band{display:grid;gap:18px;padding:24px 20px;margin-top:12px;border-radius:20px;background:var(--bg-2);border:1px solid var(--line)}
-.band li{display:flex;align-items:center;gap:12px;font-weight:500;font-size:15px;color:var(--ink)}
+.band li{display:flex;align-items:center;gap:12px;font-weight:500;font-size:15px;line-height:1.35;color:var(--ink)}
 .band li img{height:22px;width:auto}
 .band li img.tv{height:26px}
 .band li small{display:block;font-weight:400;color:var(--ink-2);font-size:13px}
@@ -142,6 +145,8 @@ h2{font-weight:700;font-size:clamp(34px,7.6vw,60px);line-height:1;letter-spacing
 .close{border-top:1px solid var(--line)}
 .close .ctas{max-width:520px}
 footer{padding:0 0 40px;color:var(--ink-2);font-size:14px}
+.toast{position:fixed;left:50%;bottom:max(20px,env(safe-area-inset-bottom));transform:translate(-50%,16px);z-index:2147483647;padding:12px 18px;border-radius:999px;background:var(--ink);color:#12071f;font-weight:500;font-size:15px;white-space:nowrap;opacity:0;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.toast.in{opacity:1;transform:translate(-50%,0)}
 
 /* ===== motion ===== */
 [data-reveal]{opacity:0;transform:translateY(22px);filter:blur(6px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease)}
@@ -179,10 +184,11 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
   .ctas{grid-template-columns:auto auto;justify-content:start}
   .hero .ctas{grid-column:1;margin-top:26px}
   .dates{grid-column:1;font-size:15px}
+  .note{grid-column:1;font-size:15px}
   .cal{grid-column:1}
   .cal span{width:auto}
   body button.luma-checkout--button{width:auto!important;min-width:210px}
-  .band{grid-template-columns:repeat(3,auto);justify-content:space-between;align-items:center;padding:24px 36px}
+  .band{grid-template-columns:repeat(2,auto);justify-content:space-between;align-items:center;padding:24px 36px}
   section{padding:104px 0}
   .split{grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
   .split .lead{font-size:22px}
@@ -204,29 +210,24 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
   </nav>
   <div class="hero">
     <div>
-      <p class="kicker" data-reveal>Two free live classes with Favour Yusuf</p>
+      <p class="kicker" data-reveal>Free live class, 25 and 26 September</p>
       <h1 id="h1"><span class="l"><span>Ship</span></span><span class="l"><span>with AI.</span></span></h1>
     </div>
     <div class="statement" data-reveal>
-      <b>Learn how to build AI tools and make videos with AI, live on Google Meet.</b>
-      <span>I made over $10K this year building AI tools for clients. I'll show you how I do it, step by step, from an empty page to a working link.</span>
+      <b>Learn how to build AI tools and make videos with AI.</b>
+      <span>I made over $10K this year building AI tools for clients. I'll show you exactly how I do it, step by step, live on Google Meet.</span>
     </div>
     <div class="ctas" data-reveal>
-      <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for both classes</button>
+      <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Save my free seat</button>
+      <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-yh6vAPBjduKOTRt" id="day2btn" hidden aria-hidden="true" tabindex="-1">Register for Day 2</button>
     </div>
-    <p class="dates" data-reveal>Day 1, Friday 25 September, 7 to 9pm WAT. Day 2, Saturday 26 September, 6 to 8pm WAT. Free. No code needed.</p>
-    <div class="cal" data-reveal>
-      <span>Add each class to your calendar:</span>
-      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%201%3A%20Learn%20how%20to%20build%20AI%20tools&dates=20260925T180000Z%2F20260925T200000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz&location=Google%20Meet" target="_blank" rel="noopener">Day 1, Fri 25 Sept</a>
-      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%202%3A%20Learn%20how%20to%20make%20videos%20with%20AI&dates=20260926T170000Z%2F20260926T190000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz&location=Google%20Meet" target="_blank" rel="noopener">Day 2, Sat 26 Sept</a>
-    </div>
+    <p class="dates" data-reveal><span>Day 1, Friday 25 September, 7 to 9pm WAT</span><span>Day 2, Saturday 26 September, 6 to 8pm WAT</span></p>
   </div>
 </div>
 
 <ul class="band" data-reveal>
-  <li><img class="tv" src="assets/trustverifi-logo-white.png" alt="TrustVerifi" width="497" height="150"><span>Client<small>tools, web app and video ads</small></span></li>
-  <li><img src="assets/upwork.svg" alt="Upwork" width="22" height="22"><span>Over $100K earned<small>as a freelancer</small></span></li>
-  <li><span>About 160 people<small>bought my last course</small></span></li>
+  <li><img class="tv" src="assets/trustverifi-logo-white.png" alt="TrustVerifi" width="497" height="150"><span>I built TrustVerifi's web app, tools and video ads.</span></li>
+  <li><img src="assets/upwork.svg" alt="Upwork" width="22" height="22"><span>I've earned over $100K on Upwork as a freelancer.</span></li>
 </ul>
 
 <section id="work" class="dark-ground">
@@ -278,7 +279,7 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
     <li>How to find good ideas that you can build tools for</li>
   </ul>
   <div class="cta-row" data-reveal>
-    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for both classes</button>
+    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Save my free seat</button>
   </div>
 </section>
 
@@ -296,7 +297,7 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
   </ul>
   <p class="sub" data-reveal>You can attend Day 2 on its own. If you built a tool on Day 1, we make the video for that.</p>
   <div class="cta-row" data-reveal>
-    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for both classes</button>
+    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Save my free seat</button>
   </div>
 </section>
 
@@ -312,25 +313,25 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
     </div>
     <div data-reveal>
       <h3>What it costs</h3>
-      <p>Both classes are free. There's a paid course after this for people who want to go further. I'll mention it at the end.</p>
+      <p>Both classes are free. If you miss a class live, the replay goes to everyone who registered. There's a paid course after this for people who want to go further. I'll mention it at the end.</p>
     </div>
   </div>
 </section>
 
 <section class="close dark-ground" id="register">
-  <h2 data-reveal>Two classes. One registration.</h2>
+  <h2 data-reveal>Two free classes. One seat.</h2>
   <div class="ctas" data-reveal>
-    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Register for both classes</button>
+    <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Save my free seat</button>
   </div>
   <div class="cal close-cal" data-reveal>
-      <span>Add each class to your calendar:</span>
+      <span>Add both to your calendar:</span>
       <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%201%3A%20Learn%20how%20to%20build%20AI%20tools&dates=20260925T180000Z%2F20260925T200000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz&location=Google%20Meet" target="_blank" rel="noopener">Day 1, Fri 25 Sept</a>
       <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%202%3A%20Learn%20how%20to%20make%20videos%20with%20AI&dates=20260926T170000Z%2F20260926T190000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz&location=Google%20Meet" target="_blank" rel="noopener">Day 2, Sat 26 Sept</a>
     </div>
 </section>
 
 <footer>
-  <p>Get This Money, by Favour Yusuf. The Google Meet link and reminders come from Luma after you register.</p>
+  <p>Get This Money, by Favour Yusuf.</p>
 </footer>
 
 </div>
@@ -352,7 +353,10 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
   } else {
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); if (en.target.hasAttribute('data-reveal-row')) { en.target.querySelectorAll('video').forEach(function(v){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }); } } });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    }, { rootMargin: '0px 0px 0px 0px', threshold: 0.02 });
+    window.addEventListener('scroll', function(){
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) els.forEach(function(e){ e.classList.add('in'); });
+    }, { passive: true });
     els.forEach(function(e, i){
       if (e.closest('#card')) { e.style.transitionDelay = (300 + i * 90) + 'ms'; e.classList.add('in'); }
       else io.observe(e);
@@ -365,6 +369,28 @@ h1.in .l:nth-child(2)>span{transform:none;transition-delay:.27s}
     }, { threshold: 0.25 });
     vids.forEach(function(v){ vo.observe(v); });
   }
+
+  /* one registration for both days: after Day 1 completes in Luma's overlay, open Day 2 */
+  var day2 = document.getElementById('day2btn'), day1Done = false, day2Opened = false;
+  function openDay2(){
+    if (day2Opened) return; day2Opened = true;
+    document.querySelectorAll('.luma-checkout--overlay').forEach(function(o){ o.remove(); });
+    var t = document.createElement('div'); t.className = 'toast'; t.textContent = 'Day 1 saved. One more for Day 2.';
+    document.body.appendChild(t); requestAnimationFrame(function(){ t.classList.add('in'); });
+    setTimeout(function(){ t.classList.remove('in'); setTimeout(function(){ t.remove(); }, 400); }, 5000);
+    setTimeout(function(){ day2.click(); }, 350);
+  }
+  window.addEventListener('message', function(e){
+    if (e.origin !== 'https://luma.com' || !e.data || e.data.type !== 'luma:purchase') return;
+    var d = e.data; var txt = JSON.stringify(d);
+    if (txt.indexOf('yh6vAPBjduKOTRt') !== -1) return;   /* that was Day 2 itself */
+    day1Done = true; setTimeout(openDay2, 900);
+  });
+  new MutationObserver(function(muts){
+    muts.forEach(function(m){ m.removedNodes.forEach(function(n){
+      if (n.nodeType === 1 && n.classList && n.classList.contains('luma-checkout--overlay') && day1Done && !day2Opened) openDay2();
+    }); });
+  }).observe(document.body, { childList: true });
 
   /* the field's light follows the pointer on devices with a mouse */
   if (!reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
