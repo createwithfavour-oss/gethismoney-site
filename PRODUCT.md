@@ -28,6 +28,8 @@ Registration and reminders run through Luma (email, SMS, WhatsApp). The class ru
 ## Brand Commitments
 - Name: Get This Money, wordmark and logomark in `assets/gtm-logomark-white.svg` and the GTM BRANDING folder (purple #5722CB, pink #FFBFF9, plum #370533, black).
 - Typeface: Aeonik (licensed, woff2 in `assets/`). Airnt is a secondary display face in the brand kit.
+- Purple on the web: the brand purple #5722CB fails contrast as a button on near-black, so buttons use #7b4dff and the hero field runs #6a2cff to #4a1a9e to #1c0b3a. Keep these values on later surfaces.
+- Copy voice, confirmed 16 Sep 2026: "Learn how to" beats "Watch me". Buttons say what they do in plain words ("Register for Day 1"). Day 1 and Day 2, matching the Luma titles.
 - Favour asked for the GTM web presence to feel cinematic and premium, the kind of site people call an "$8K website", as a demonstration of what he builds with AI. This class page is the first surface of that world.
 - Voice: Favour speaks plainly and in first person. See the copy rules above.
 
@@ -35,7 +37,7 @@ Registration and reminders run through Luma (email, SMS, WhatsApp). The class ru
 - Live client tool: https://augmentus-roi-finder.pages.dev (screenshot in `assets/augmentus-roi-tool.png`).
 - Client video: `Agency shit/Augmentus-sample/Augmentus-explainer-9x16-FINAL.mp4` (heavy media).
 - Proof points that are true: over $100K earned on Upwork as a freelancer; over $10K in 2026 from AI client work; about 160 buyers of the previous course; one client got both a tool and a video.
-- Favour will supply a photo of himself and a screen recording of him building. Not on disk yet; the page carries labeled slots for them.
+- Portraits on disk: `Agency shit/Brand Engine/site-v3/hero-portrait.jpg` (real photo, used grayscale in the hero) and `hero-portrait-2.jpg`. The file `Agency shit/output/ship-with-ai/favour-studio-headshot.png` is AI-generated; Favour said it looked weird, do not use it. A screen recording of Favour building is still to come and is deliberately not on this surface until it exists.
 - No testimonials on hand. Do not invent any.
 
 ## Product Principles
