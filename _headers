@@ -1,0 +1,15 @@
+# Images and video: daily, so a swap reaches everyone within a day
+/assets/*.webp
+  Cache-Control: public, max-age=86400
+/assets/*.png
+  Cache-Control: public, max-age=86400
+/assets/*.svg
+  Cache-Control: public, max-age=86400
+/assets/*.jpg
+  Cache-Control: public, max-age=86400
+/assets/*.mp4
+  Cache-Control: public, max-age=86400
+
+# Fonts never change
+/assets/*.woff2
+  Cache-Control: public, max-age=31536000, immutable

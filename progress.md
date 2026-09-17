@@ -22,6 +22,7 @@ After each Luma form closes, a step sheet shows the next step: Day 2 seat, then 
 
 ## Done 17 Sep
 
+- Performance pass: 2.04 MB down to 1.04 MB, first screen 246 KB, full load on throttled 4G 2.3s. WebP images, subset fonts, lighter tile loops, `_headers` for browser caching.
 - Luma confirmation emails for both events now carry the other day's link and the WhatsApp channel link (Favour pasted them).
 
 ## Open

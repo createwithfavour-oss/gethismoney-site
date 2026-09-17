@@ -4,6 +4,8 @@ Newest first. Each line says what was decided and why. The PM board in Notion ("
 
 ## 17 Sep 2026
 
+- **Images are WebP, fonts are subset, loops are re-encoded, and `/assets` carries real cache headers.** The page was 2.04 MB; it is now 1.04 MB. See devlog for the numbers.
+- **Cache lifetimes: a day for images and video, a year for fonts.** Favour's call. Filenames carry no content hash, so a long life on images would leave returning visitors on an old photo after a swap. Fonts never change.
 - **Registration is three steps: Day 1, Day 2, WhatsApp channel ("Learn AI with Favour").** From the PM board funnel flow. The page shows each next step when Luma's form closes, because Luma cannot redirect after registration and its completion signal is untested. The channel link is also in the closing band.
 - **Proof is three stat badges, not sentences.** 190 users on TrustVerifi (190 accounts created in the ads report), 56,000+ ad impressions, $100K+ on Upwork. Two plain statements with logos made no sense without a heading. Numbers come from the TrustVerifi ads report (11 Aug to 3 Sep). The ads report has no video view count, so the badge says "times my TrustVerifi video ads were shown", not views.
 - **Intro copy under each day is three short paragraphs.** One block read as cramped. Lead and closing lines in full ink at 500 weight, middle line in soft ink.

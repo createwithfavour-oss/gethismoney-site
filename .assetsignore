@@ -20,3 +20,5 @@ package-lock.json
 decisions.md
 devlog.md
 progress.md
+assets/_src
+perf-tmp.js

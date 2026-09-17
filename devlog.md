@@ -4,6 +4,16 @@ Newest first. What was built, what was tried and dropped, and anything a later s
 
 ## 17 Sep 2026
 
+**Performance pass.** The page was 2.04 MB over 22 requests, 522 KB before any scrolling. Measured with headless Chrome on a 393px profile, throttled to 1.6 Mbps and 4x CPU. Four changes:
+- Seven JPEG/PNG images became WebP at quality 72, 701 KB down to 257 KB. Originals are kept in `assets/_src/` and excluded from deploys.
+- The three silent tile loops were re-encoded to 480 wide at crf 30, 1.16 MB down to 677 KB. They render about 300px wide, so 540x960 at 430 kbps was waste.
+- Aeonik Regular, Medium and Bold were subset to latin plus punctuation with `pyftsubset`, 126 KB down to 59 KB. The page uses 61 characters; the only non-ASCII one is `·` (U+00B7). Resubset from `assets/_src/` if the copy ever needs more.
+- New `_headers` file. Everything under `/assets` defaults to `max-age=0, must-revalidate` on Workers, so every repeat visit revalidated all 22 files. Images and video now get a day, fonts a year with `immutable`. Per-extension rules, because two patterns matching the same file makes Cloudflare concatenate both Cache-Control values into one broken header.
+
+Result: 2.04 MB to 1.04 MB, first screen 522 KB to 246 KB, and a full load on throttled 4G from 5.1s to 2.3s. LCP is the headline text at 0.63s, CLS 0.
+
+## 17 Sep 2026
+
 **Three-step registration flow.** Replaced the old toast plus auto-open of Day 2 with a step sheet (`#steps`): Day 1 seat, Day 2 seat, WhatsApp channel, with ticks. A capture-phase click listener records which Luma event was opened. When Luma's overlay is removed (MutationObserver), the sheet shows the next step. If Luma's `luma:purchase` message arrives, that day is marked done in `localStorage` (`gtm-steps`) and the overlay closes after 1.4s, so the copy says "Day 1 is saved"; without the message it uses neutral copy ("Next, save your seat for Day 2") and offers "I still need to register for Day 1". Returning visitors with Day 1 done who press any Save button go straight to the next step. Bottom sheet on phones, centred card on desktop. The sheet's buttons exist in the HTML at load so Luma binds them. Closing band has a channel link too. Luma has no redirect-after-registration setting (help.luma.com, event registration process); the confirmation email body is the other handle.
 
 **Registration button was broken since launch.** Luma's `checkout-button.js` finds its own origin through `document.getElementById("luma-checkout")`. Our script tag had no id, so the stylesheet loaded from `gethismoney.xyz/checkout-button.css` (404) and the overlay rendered unstyled at the bottom of the page, invisible. Earlier checks only tested that the overlay element existed. Fix: `<script id="luma-checkout" ...>`. Now verified by checking the modal is fixed, on screen, and the element at the centre of the viewport is the Luma iframe.
