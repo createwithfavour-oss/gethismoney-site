@@ -132,13 +132,13 @@ body button.luma-checkout--button.secondary{background:rgba(246,242,234,.10)!imp
 body button.luma-checkout--button:active{transform:scale(.97)}
 body button.luma-checkout--button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 
-/* ===== proof ===== */
-.proof{display:grid;gap:36px;margin-bottom:64px}
-
-.proof li{display:flex;flex-direction:column;gap:18px}
-.proof img{height:28px;width:auto;align-self:flex-start;filter:var(--logo)}
-.proof img.tv{height:34px}
-.proof span{font-weight:500;font-size:24px;line-height:1.25;letter-spacing:-.02em;max-width:22ch}
+/* ===== stats ===== */
+.stats{display:grid;margin:0 0 64px;border-top:1px solid var(--line)}
+.stats li{display:grid;grid-template-columns:132px 1fr;column-gap:16px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.stats .num{font-weight:700;font-size:36px;line-height:1;letter-spacing:-.03em;color:var(--ink);font-variant-numeric:tabular-nums}
+.stats .lbl{display:grid;gap:8px;font-size:15px;line-height:1.4;color:var(--ink-soft)}
+.stats .lbl img{height:20px;width:auto;filter:var(--logo)}
+.stats .lbl img.tv{height:22px}
 
 /* ===== sections ===== */
 section{padding:72px 0}
@@ -264,9 +264,6 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
   .day{gap:28px}
   .day .cta-row{display:none}
   .learn li{font-size:17px;line-height:1.45;padding:18px 0}
-  .proof{gap:32px;margin-bottom:56px}
-  .proof img{height:30px}
-  .proof img.tv{height:34px}
   .split{gap:18px}
   .split .lead{font-size:18px;line-height:1.5}
   .tile figcaption{font-size:14px;padding:44px 12px 12px}
@@ -298,9 +295,11 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
   body button.luma-checkout--button{width:auto!important;min-width:210px}
   .hero.pin{position:sticky;top:0;z-index:1}
   .sheet{padding-top:24px}
-  .proof{grid-template-columns:1fr 1fr;gap:16px}
-  .proof li{gap:22px}
-  .proof span{font-size:34px}
+  .stats{grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);margin-bottom:96px}
+  .stats li{grid-template-columns:1fr;align-content:start;row-gap:14px;padding:36px 32px 36px 0;border-bottom:0}
+  .stats li+li{padding-left:32px;border-left:1px solid var(--line)}
+  .stats .num{font-size:64px}
+  .stats .lbl{font-size:16px}
   section{padding:104px 0}
   .split{grid-template-columns:1.1fr 1fr;gap:60px;align-items:end}
   .split .lead{font-size:22px}
@@ -397,9 +396,10 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
 </section>
 
 <section id="work">
-<ul class="proof">
-  <li data-m="rise"><img class="tv" src="assets/trustverifi-logo-white.png" alt="TrustVerifi" width="497" height="150"><span>I built TrustVerifi's web app, tools and video ads.</span></li>
-  <li data-m="rise" data-lag="1"><img src="assets/upwork.svg" alt="Upwork" width="22" height="22"><span>I've earned over $100K on Upwork as a freelancer.</span></li>
+<ul class="stats">
+  <li data-m="rise"><span class="num">190</span><span class="lbl"><img class="tv" src="assets/trustverifi-logo-white.png" alt="TrustVerifi" width="497" height="150">accounts created on the TrustVerifi web app I built</span></li>
+  <li data-m="rise" data-lag="1"><span class="num">56,000+</span><span class="lbl"><img class="tv" src="assets/trustverifi-logo-white.png" alt="TrustVerifi" width="497" height="150">times my TrustVerifi video ads were shown</span></li>
+  <li data-m="rise" data-lag="2"><span class="num">$100K+</span><span class="lbl"><img src="assets/upwork.svg" alt="Upwork" width="22" height="22">earned on Upwork as a freelancer</span></li>
 </ul>
   <div class="split">
     <h2 data-chars>I make AI tools and videos for clients. You'll learn how I do it.</h2>
