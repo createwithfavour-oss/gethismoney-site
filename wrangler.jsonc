@@ -5,6 +5,11 @@
   "observability": {
     "enabled": true
   },
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "gethismoney.xyz", "custom_domain": true },
+    { "pattern": "www.gethismoney.xyz", "custom_domain": true }
+  ],
   "assets": {
     "directory": "."
   }

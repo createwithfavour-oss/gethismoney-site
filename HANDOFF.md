@@ -1,4 +1,28 @@
-# HANDOFF, 16 Sep 2026
+# HANDOFF, 16 Sep 2026 (updated evening)
+
+## Update, 17 Sep evening: DEPLOYED to gethismoney.xyz/ship-with-ai
+- wrangler.jsonc now has custom domains gethismoney.xyz and www, plus workers_dev true.
+- Work is a grid again (a rotating wheel was rejected); tiles open a preview. Video previews play full ads from assets/full/ with a sound button.
+- Details section removed. Day 2 time is 7 to 9pm. Day 1 and Day 2 mirrored. Hero dates are a two-column schedule. Closing band has a pointer glow.
+- Uncommitted: everything since 16 Sep. Nothing committed to git.
+
+## Update, 17 Sep (earlier)
+- Lower sections rebuilt with scroll-linked motion (pinned hero, masked letter headings, staggered tiles, list rail). Engine is inline JS in `ship-with-ai.html`, uses `data-m` and `data-chars`.
+- Design slop removed: brand purple #5722CB on buttons only, no pills, cards, shadows or tiny grey caps. Order: hero, Day 1, Day 2, work with proof, details, closing band. Floating registration bar after the hero.
+- Copy: paid course removed everywhere; the ROI calculator "made on screen" line removed; four lines rewritten with Favour's approval.
+- playwright-core installed as a dev dependency for the scroll-craft skill (package files are kept out of the deploy).
+- Local preview: http://localhost:8787/ship-with-ai.html (python http.server, launch config in `Agency shit/.claude/launch.json`).
+
+## Update, 16 Sep evening
+- Hero rebuilt to the Salem King structure (not a copy): AI headshot 5 in black and white (`assets/favour-bw.jpg`), label, three-line headline, body, one button, dates. Done and deployed.
+- Dark and light themes. Follows the system setting; switch at top left stores the choice in localStorage.
+- Page moved to `ship-with-ai.html`, served at /ship-with-ai. `_redirects` sends / and /index.html there (302).
+- `og-image.png` regenerated from the dark hero.
+- `.assetsignore` now keeps HANDOFF, PRODUCT, DESIGN, Samples, .impeccable and the source headshot PNGs off the live site.
+- PM board and the brain map updated (Favour said yes).
+- Next: Favour moves gethismoney.xyz to Cloudflare; then add `routes` with custom_domain for gethismoney.xyz and www to wrangler.jsonc and deploy (token has workers_routes write). Then test in WhatsApp's browser. DESIGN.md still describes the old purple version.
+- Uncommitted: all of the above. Nothing committed yet.
+
 
 ## Goal
 Ship the registration page for Favour's free two-day class "Ship with AI" (25 and 26 Sep 2026) at gethismoney.xyz, at a craft level Favour accepts, and drive Luma registrations for both days.
@@ -11,7 +35,7 @@ Ship the registration page for Favour's free two-day class "Ship with AI" (25 an
 - Uncommitted: small .gitignore and .assetsignore edits (ignore `heroes/`). Commit them.
 
 ## Files that matter
-- `/Users/phronesis/Claude Cowork/GTM - Get This Money/gethismoney-site/index.html` — the whole page, CSS and JS inline. Direction contract in the top comment.
+- `/Users/phronesis/Claude Cowork/GTM - Get This Money/gethismoney-site/index.html` — (now `ship-with-ai.html`) the whole page, CSS and JS inline. Direction contract in the top comment.
 - `.../gethismoney-site/PRODUCT.md` and `DESIGN.md` — product truth and the recorded system (DESIGN.md describes the earlier purple version; update after the Salem hero lands).
 - `.../gethismoney-site/assets/` — Aeonik woff2, `favour.jpg` (colour), `Favour headshot` (source PNG, no extension), tool screenshot, `site-hire.jpg`, `site-wedding.jpg`, TrustVerifi ad loops and posters, Augmentus video loop, TrustVerifi and Upwork logos, `og-image.png`.
 - `.../gethismoney-site/heroes/` — five rejected hero variants, ignored by git and deploy. Delete when done.
