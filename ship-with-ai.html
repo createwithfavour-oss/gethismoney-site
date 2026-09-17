@@ -397,9 +397,9 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
 
 <section id="work">
 <ul class="stats">
-  <li data-m="rise"><span class="num">190</span><span class="lbl"><img class="tv" src="assets/trustverifi-logo-white.png" alt="TrustVerifi" width="497" height="150">users on the TrustVerifi web app I built</span></li>
-  <li data-m="rise" data-lag="1"><span class="num">56,000+</span><span class="lbl"><img class="tv" src="assets/trustverifi-logo-white.png" alt="TrustVerifi" width="497" height="150">times my TrustVerifi video ads were shown</span></li>
-  <li data-m="rise" data-lag="2"><span class="num">$100K+</span><span class="lbl"><img src="assets/upwork.svg" alt="Upwork" width="22" height="22">earned on Upwork as a freelancer</span></li>
+  <li data-m="rise"><span class="num" data-count="190">190</span><span class="lbl"><img class="tv" src="assets/trustverifi-logo-white.png" alt="TrustVerifi" width="497" height="150">users on the TrustVerifi web app I built</span></li>
+  <li data-m="rise" data-lag="1"><span class="num" data-count="56000" data-suffix="+">56,000+</span><span class="lbl"><img class="tv" src="assets/trustverifi-logo-white.png" alt="TrustVerifi" width="497" height="150">times my TrustVerifi video ads were shown</span></li>
+  <li data-m="rise" data-lag="2"><span class="num" data-count="100" data-prefix="$" data-suffix="K+">$100K+</span><span class="lbl"><img src="assets/upwork.svg" alt="Upwork" width="22" height="22">earned on Upwork as a freelancer</span></li>
 </ul>
   <div class="split">
     <h2 data-chars>I make AI tools and videos for clients. You'll learn how I do it.</h2>
@@ -632,6 +632,29 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
       band.style.setProperty('--mx', (e.clientX - (r.left + r.width / 2) + vw / 2) + 'px');
       band.style.setProperty('--my', (e.clientY - r.top) + 'px');
     });
+  })();
+
+  /* stat numbers count up once when they come into view */
+  (function(){
+    var nums = [].slice.call(document.querySelectorAll('[data-count]'));
+    if (reduce || !nums.length || !('IntersectionObserver' in window)) return;
+    function fmt(el, v){ return (el.dataset.prefix || '') + Math.round(v).toLocaleString('en-US') + (el.dataset.suffix || ''); }
+    nums.forEach(function(el){ el.textContent = fmt(el, 0); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        var el = en.target, to = +el.dataset.count, delay = nums.indexOf(el) * 150, dur = 1600, t0 = 0;
+        function step(t){
+          if (!t0) t0 = t;
+          var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 4);
+          el.textContent = fmt(el, to * e);
+          if (k < 1) requestAnimationFrame(step); else el.textContent = fmt(el, to);
+        }
+        setTimeout(function(){ requestAnimationFrame(step); }, delay);
+      });
+    }, { threshold: 0.6 });
+    nums.forEach(function(el){ io.observe(el); });
   })();
 
   /* work tiles: click grows a tile into a large preview */

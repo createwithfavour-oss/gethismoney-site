@@ -4,6 +4,8 @@ Newest first. What was built, what was tried and dropped, and anything a later s
 
 ## 17 Sep 2026
 
+**Count-up on stats.** `[data-count]` numbers start at zero and count up once when 60% visible (1.6s, ease-out, 150ms stagger), keeping `data-prefix` and `data-suffix`. The HTML holds the final values, so no-JS and reduced motion show them directly. TrustVerifi label now says "users".
+
 **Stat badges.** Replaced the two proof statements with a three-item stat row (`.stats`): 190 / 56,000+ / $100K+, each with its logo and a one-line label. Three columns with hairline dividers on desktop, three rows with the number on the left on phones.
 
 **Readability.** Day intros split into three `<p>` inside `.sub`. New token `--ink-soft` (#d9d4ca dark, #35332f light) for supporting text in the hero, day intros and work intro.
