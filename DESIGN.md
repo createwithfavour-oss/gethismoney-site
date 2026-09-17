@@ -99,7 +99,7 @@ Breakpoints: 390px (gutter), 760px (structure), 1100px (hero padding).
 - **Buttons:** every button is a Luma checkout trigger. Luma injects its own styles, so rules are `body button.luma-checkout--button` with `!important`. 6px radius, 14px 24px padding, min-height 50px (44px in the dock), 500 weight 16px, full width on phones. Hover opacity 0.9, press scale 0.97, 2px ink focus ring.
 - **Theme toggle:** 44px, sun or moon icon, no border. Rotates in on switch.
 - **Learn list:** hairline rows, a 10px ring marker that fills when the row passes 55% of the viewport (85% on phones), and a 2px rail that fills with scroll.
-- **Tiles:** 4px radius, caption on a bottom gradient, image moves slightly slower than the tile.
+- **Tiles:** 4px radius, caption on a bottom gradient, image moves slightly slower than the tile. A tile whose work is a live site gets `.has-site`, a `data-site` URL and a `.tile-site` chip bottom-right: 13px text, an arrow, 6px radius, translucent ink ground with blur, 32px tall with the tap target grown to 44px by a negative-inset `::after`. The caption reserves room for it.
 - **Preview:** click or Enter on a tile. The tile grows from its spot to a centred box sized to the media (560ms, `cubic-bezier(.32,.72,0,1)`), backdrop blurs, caption fades in. Video tiles play the full file from `data-full`, muted, with a "Turn sound on" / "Mute" button. Escape, backdrop or close button shrinks it back (420ms).
 - **Toast:** after Day 1 registers, "Day 1 saved. One more for Day 2." then the Day 2 Luma form opens.
 

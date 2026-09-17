@@ -2,6 +2,11 @@
 
 Newest first. Each line says what was decided and why. The PM board in Notion ("PROJECT: Ship with AI class + gethismoney.xyz") holds the same decisions for other agents.
 
+## 18 Sep 2026
+
+- **Tiles for live sites carry a "Visit site" chip.** Only the two that are live and safe to name: `hire.trustverifi.com` and `samuelandkathryn.com`. The tile still opens the preview; the chip is a separate target.
+- **The ROI calculator gets no link.** Its URL is `augmentus-roi-finder.pages.dev`, which names Augmentus. Blocked on Favour deciding whether to name them or move the tool to a neutral domain.
+
 ## 17 Sep 2026
 
 - **Images are WebP, fonts are subset, loops are re-encoded, and `/assets` carries real cache headers.** The page was 2.04 MB; it is now 1.04 MB. See devlog for the numbers.

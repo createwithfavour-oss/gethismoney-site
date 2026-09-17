@@ -2,6 +2,10 @@
 
 Newest first. What was built, what was tried and dropped, and anything a later session would trip over.
 
+## 18 Sep 2026
+
+**Visit site buttons on the work tiles.** Tiles that show a live site carry `data-site` and a small "Visit site" chip bottom-right: 32px tall with a `::after` inset that grows the tap target to 44px, on the caption's own gradient. Two of them, `hire.trustverifi.com` and `samuelandkathryn.com`, both checked live. The tile click handler ignores clicks inside `.tile-site`, the keydown handler ignores events that did not start on the figure, and the preview's Tab trap now cycles through the close button, the sound button and the caption link. The preview caption appends the domain as a link. The ROI calculator has no button: it is live at `augmentus-roi-finder.pages.dev`, and that domain names Augmentus, who never replied to the pitch.
+
 ## 17 Sep 2026
 
 **Performance pass.** The page was 2.04 MB over 22 requests, 522 KB before any scrolling. Measured with headless Chrome on a 393px profile, throttled to 1.6 Mbps and 4x CPU. Four changes:

@@ -162,6 +162,14 @@ h2{font-weight:700;font-size:clamp(32px,8vw,50px);line-height:1.02;letter-spacin
 .tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 14px 14px;font-size:13px;line-height:1.35;color:#f6f2ea;background:linear-gradient(to top,rgba(9,9,11,.9),rgba(9,9,11,0))}
 .tile{cursor:zoom-in}
 .tile:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.tile-site{position:absolute;right:10px;bottom:10px;z-index:2;display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 11px;border-radius:6px;font-size:13px;font-weight:500;line-height:1;color:#f6f2ea;text-decoration:none;background:rgba(11,11,12,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background .18s var(--ease),transform .18s var(--ease)}
+.tile-site svg{width:13px;height:13px;flex:none}
+.tile-site::after{content:"";position:absolute;inset:-6px -5px}
+.tile-site:hover{background:rgba(11,11,12,.85)}
+.tile-site:active{transform:scale(.97)}
+.tile-site:focus-visible{outline:2px solid #f6f2ea;outline-offset:2px}
+.tile.has-site figcaption{padding-right:124px}
+.lb-cap a{color:inherit;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
 .lb{position:fixed;inset:0;z-index:60}
 .lb[hidden]{display:none}
 .lb-back{position:absolute;inset:0;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
@@ -294,6 +302,8 @@ html.steps-open .dock{opacity:0;pointer-events:none}
   .split{gap:18px}
   .split .lead{font-size:18px;line-height:1.5}
   .tile figcaption{font-size:14px;padding:44px 12px 12px}
+  .tile.has-site figcaption{padding-right:12px;padding-bottom:50px}
+  .tile-site{right:9px;bottom:9px}
   .close-panel{padding:64px 0 72px;gap:22px}
 }
 
@@ -443,9 +453,10 @@ html.steps-open .dock{opacity:0;pointer-events:none}
       <video data-full="assets/full/robotics-explainer.mp4" src="assets/augmentus-video-loop.mp4" poster="assets/augmentus-video-poster.webp" muted loop playsinline preload="metadata" aria-label="Nine seconds of a marketing video with word-timed captions"></video>
       <figcaption>Marketing video for the same company</figcaption>
     </figure>
-    <figure data-m="tile" data-lag="2" class="tile" tabindex="0" role="button" aria-label="Hire by TrustVerifi, a full web app, live at hire.trustverifi.com, open larger">
+    <figure data-m="tile" data-lag="2" class="tile has-site" tabindex="0" role="button" aria-label="Hire by TrustVerifi, a full web app, open larger" data-site="https://hire.trustverifi.com" data-site-label="hire.trustverifi.com">
       <img src="assets/site-hire.webp" width="960" height="1200" alt="Hire by TrustVerifi, the hiring web app" loading="lazy" decoding="async">
-      <figcaption>Hire by TrustVerifi, a full web app, live at hire.trustverifi.com</figcaption>
+      <figcaption>Hire by TrustVerifi, a full web app</figcaption>
+      <a class="tile-site" href="https://hire.trustverifi.com" target="_blank" rel="noopener" aria-label="Open hire.trustverifi.com in a new tab">Visit site<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
     </figure>
     <figure data-m="tile" data-lag="0" class="tile" tabindex="0" role="button" aria-label="Video ad for TrustVerifi, open larger">
       <video data-full="assets/full/trustverifi-ad.mp4" src="assets/trustverifi-ad-loop.mp4" poster="assets/trustverifi-ad-poster.webp" muted loop playsinline preload="metadata" aria-label="Nine seconds of a TrustVerifi video ad"></video>
@@ -455,9 +466,10 @@ html.steps-open .dock{opacity:0;pointer-events:none}
       <video data-full="assets/full/trustverifi-presenter.mp4" src="assets/trustverifi-ugc-loop.mp4" poster="assets/trustverifi-ugc-poster.webp" muted loop playsinline preload="metadata" aria-label="Nine seconds of a TrustVerifi presenter ad"></video>
       <figcaption>Presenter ad for TrustVerifi</figcaption>
     </figure>
-    <figure data-m="tile" data-lag="2" class="tile wide" tabindex="0" role="button" aria-label="Wedding website for Kathryn and Samuel, open larger">
+    <figure data-m="tile" data-lag="2" class="tile wide has-site" tabindex="0" role="button" aria-label="Wedding website for Kathryn and Samuel, open larger" data-site="https://samuelandkathryn.com" data-site-label="samuelandkathryn.com">
       <img src="assets/site-wedding.webp" width="960" height="1200" alt="The wedding website for Kathryn and Samuel" loading="lazy" decoding="async" style="object-position:50% 12%">
       <figcaption>Wedding website for Kathryn and Samuel</figcaption>
+      <a class="tile-site" href="https://samuelandkathryn.com" target="_blank" rel="noopener" aria-label="Open samuelandkathryn.com in a new tab">Visit site<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
     </figure>
   </div>
 </section>
@@ -748,7 +760,15 @@ html.steps-open .dock{opacity:0;pointer-events:none}
         clone.removeAttribute('loading');
         lbMedia.replaceChildren(clone);
       }
-      lbCap.textContent = card.querySelector('figcaption').textContent;
+      lbCap.replaceChildren(document.createTextNode(card.querySelector('figcaption').textContent));
+      if (card.dataset.site) {
+        var link = document.createElement('a');
+        link.href = card.dataset.site; link.target = '_blank'; link.rel = 'noopener';
+        link.textContent = card.dataset.siteLabel || 'Visit site';
+        link.addEventListener('click', function(e){ e.stopPropagation(); });
+        lbCap.appendChild(document.createTextNode(' · '));
+        lbCap.appendChild(link);
+      }
       var f = frames(card, media);
       Object.assign(lbMedia.style, f.to);
       lbCap.style.left = f.fl + 'px'; lbCap.style.top = (f.ft + f.fh + 16) + 'px'; lbCap.style.width = f.fw + 'px';
@@ -785,14 +805,23 @@ html.steps-open .dock{opacity:0;pointer-events:none}
     }
 
     tiles.forEach(function(t){
-      t.addEventListener('click', function(){ openCard(t); });
-      t.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCard(t); } });
+      t.addEventListener('click', function(e){ if (e.target.closest && e.target.closest('.tile-site')) return; openCard(t); });
+      t.addEventListener('keydown', function(e){
+        if (e.target !== t) return;
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCard(t); }
+      });
     });
     lbBack.addEventListener('click', closeCard);
     lbClose.addEventListener('click', closeCard);
     lbMedia.addEventListener('click', closeCard);
     addEventListener('keydown', function(e){ if (open && e.key === 'Escape') closeCard(); });
-    lb.addEventListener('keydown', function(e){ if (e.key !== 'Tab') return; e.preventDefault(); var sb = lbMedia.querySelector('.lb-sound'); if (sb && document.activeElement === lbClose) sb.focus(); else lbClose.focus(); });
+    lb.addEventListener('keydown', function(e){
+      if (e.key !== 'Tab') return;
+      e.preventDefault();
+      var ring = [lbClose].concat([].slice.call(lbMedia.querySelectorAll('.lb-sound')), [].slice.call(lbCap.querySelectorAll('a')));
+      var i = ring.indexOf(document.activeElement);
+      ring[(i + (e.shiftKey ? ring.length - 1 : 1) + ring.length) % ring.length].focus();
+    });
   })();
 
   /* registration steps: Day 1, then Day 2, then the WhatsApp channel */

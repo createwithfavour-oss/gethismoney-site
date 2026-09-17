@@ -25,8 +25,13 @@ After each Luma form closes, a step sheet shows the next step: Day 2 seat, then 
 - Performance pass: 2.04 MB down to 1.04 MB, first screen 246 KB, full load on throttled 4G 2.3s. WebP images, subset fonts, lighter tile loops, `_headers` for browser caching.
 - Luma confirmation emails for both events now carry the other day's link and the WhatsApp channel link (Favour pasted them).
 
+## Done 18 Sep
+
+- "Visit site" chips on the two work tiles whose sites are live: hire.trustverifi.com and samuelandkathryn.com.
+
 ## Open
 
+- The ROI calculator tile has no link because its URL (augmentus-roi-finder.pages.dev) names Augmentus. Decide: name them, move the tool to a neutral domain, or leave it unlinked.
 - Do one real registration on a phone to confirm Luma sends its completion signal (the sheet then says "Day 1 is saved").
 - Luma Day 2 event: confirm it says 7pm.
 - Saturday calendar reminder and Hermione's WhatsApp drafts still say 6pm. The 1:1 draft still mentions the paid course.
