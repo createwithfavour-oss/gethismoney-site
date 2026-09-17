@@ -220,8 +220,35 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
   .dock span{display:none}
   body .dock button.luma-checkout--button{width:100%!important}
 }
-.toast{position:fixed;left:50%;bottom:max(84px,calc(env(safe-area-inset-bottom) + 70px));transform:translate(-50%,16px);z-index:2147483647;padding:12px 18px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:500;font-size:15px;white-space:nowrap;opacity:0;transition:opacity .3s var(--ease),transform .3s var(--ease)}
-.toast.in{opacity:1;transform:translate(-50%,0)}
+.steps{position:fixed;inset:0;z-index:9000}
+.steps[hidden]{display:none}
+.steps-back{position:absolute;inset:0;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.steps-card{position:absolute;left:50%;top:50%;width:min(440px,calc(100% - 32px));transform:translate(-50%,-50%);background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:28px 24px 24px}
+.steps-x{position:absolute;top:8px;right:8px;width:44px;height:44px;display:grid;place-items:center;padding:0;border:0;background:none;color:var(--ink-2);cursor:pointer;border-radius:8px}
+.steps-x svg{width:20px;height:20px}
+.steps-list{list-style:none;display:grid;gap:10px;margin:0 0 22px;padding:0 44px 20px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.35;color:var(--ink-2)}
+.steps-list li{display:grid;grid-template-columns:18px 1fr;gap:10px;align-items:center}
+.steps-list .mark{width:18px;height:18px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center}
+.steps-list li.now{color:var(--ink);font-weight:500}
+.steps-list li.done{color:var(--ink)}
+.steps-list li.done .mark{background:var(--ink);border-color:var(--ink)}
+.steps-list li.done .mark::after{content:"";width:8px;height:4px;border-left:2px solid var(--bg);border-bottom:2px solid var(--bg);transform:translateY(-1px) rotate(-45deg)}
+.steps h2.steps-title{font-size:26px;line-height:1.15;letter-spacing:-.02em;margin:0 0 10px;text-wrap:balance}
+.steps-body{margin:0 0 22px;font-size:16px;line-height:1.5;color:var(--ink-soft)}
+body .steps button.luma-checkout--button{width:100%!important}
+.steps-channel{display:flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:14px 24px;border-radius:6px;background:var(--purple);color:#fff;font-size:16px;font-weight:500;text-decoration:none;transition:transform 160ms var(--ease),opacity 160ms var(--ease)}
+.steps-channel svg{width:20px;height:20px}
+.steps-channel:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.steps-channel:hover{opacity:.9}}
+.steps-link{display:block;min-height:44px;margin:10px auto 0;padding:0 8px;border:0;background:none;color:var(--ink-2);font:inherit;font-size:15px;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.steps [hidden]{display:none!important}
+html.steps-open{overflow:hidden}
+html.steps-open .dock{opacity:0;pointer-events:none}
+.channel-line{margin:0;font-size:15px;color:color-mix(in srgb,var(--bg) 65%,var(--ink))}
+.channel-line a{color:var(--bg);font-weight:500;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent);text-underline-offset:5px}
+@media (max-width:759px){
+  .steps-card{left:0;right:0;top:auto;bottom:0;width:auto;transform:none;border-radius:14px 14px 0 0;border-bottom:0;padding:26px 20px max(24px,env(safe-area-inset-bottom))}
+}
 
 /* ===== motion ===== */
 [data-reveal]{opacity:0;transform:translateY(18px);filter:blur(4px);transition:opacity .7s var(--ease),transform .7s var(--ease),filter .7s var(--ease)}
@@ -343,7 +370,6 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
       </dl>
       <div class="ctas" data-reveal>
         <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">Save my free seat</button>
-        <button class="luma-checkout--button" type="button" data-luma-action="checkout" data-luma-event-id="evt-yh6vAPBjduKOTRt" id="day2btn" hidden aria-hidden="true" tabindex="-1">Register for Day 2</button>
       </div>
     </div>
   </div>
@@ -447,6 +473,7 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
       <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%201%3A%20Learn%20how%20to%20build%20AI%20tools&dates=20260925T180000Z%2F20260925T200000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz%2Fship-with-ai&location=Google%20Meet" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Day 1, Fri 25 Sept</a>
       <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ship%20with%20AI%2C%20Day%202%3A%20Learn%20how%20to%20make%20videos%20with%20AI&dates=20260926T180000Z%2F20260926T200000Z&details=Free%20live%20class%20with%20Favour%20Yusuf.%20The%20Google%20Meet%20link%20comes%20from%20Luma%20after%20you%20register%3A%20https%3A%2F%2Fgethismoney.xyz%2Fship-with-ai&location=Google%20Meet" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Day 2, Sat 26 Sept</a>
     </div>
+    <p class="channel-line"><a href="https://whatsapp.com/channel/0029VbDdNkYHwXbDsfbWfp3Y" target="_blank" rel="noopener">Join my WhatsApp channel</a> for class updates and AI tips.</p>
   </div>
 </section>
 
@@ -460,6 +487,24 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
 </div>
 
 </div></main>
+
+<div class="steps" id="steps" hidden role="dialog" aria-modal="true" aria-labelledby="stepsTitle">
+  <div class="steps-back" data-close></div>
+  <div class="steps-card">
+    <button class="steps-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <ol class="steps-list">
+      <li><span class="mark" aria-hidden="true"></span><span>Day 1 seat, Friday 25 September</span></li>
+      <li><span class="mark" aria-hidden="true"></span><span>Day 2 seat, Saturday 26 September</span></li>
+      <li><span class="mark" aria-hidden="true"></span><span>WhatsApp channel</span></li>
+    </ol>
+    <h2 class="steps-title" id="stepsTitle"></h2>
+    <p class="steps-body" id="stepsBody"></p>
+    <button class="luma-checkout--button" id="stepsDay2" type="button" data-luma-action="checkout" data-luma-event-id="evt-yh6vAPBjduKOTRt">Save my Day 2 seat</button>
+    <a class="steps-channel" id="stepsChannel" href="https://whatsapp.com/channel/0029VbDdNkYHwXbDsfbWfp3Y" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Join the WhatsApp channel</a>
+    <button class="steps-link" id="stepsBack1" type="button" data-luma-action="checkout" data-luma-event-id="evt-XAeX6PX6wDDRrHP">I still need to register for Day 1</button>
+    <button class="steps-link" id="stepsBack2" type="button" data-luma-action="checkout" data-luma-event-id="evt-yh6vAPBjduKOTRt">I still need to register for Day 2</button>
+  </div>
+</div>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Work preview">
   <div class="lb-back" id="lbBack"></div>
@@ -750,27 +795,85 @@ body .dock button.luma-checkout--button{width:auto!important;min-width:0;min-hei
     lb.addEventListener('keydown', function(e){ if (e.key !== 'Tab') return; e.preventDefault(); var sb = lbMedia.querySelector('.lb-sound'); if (sb && document.activeElement === lbClose) sb.focus(); else lbClose.focus(); });
   })();
 
-  /* one registration for both days: after Day 1 completes in Luma's overlay, open Day 2 */
-  var day2 = document.getElementById('day2btn'), day1Done = false, day2Opened = false;
-  function openDay2(){
-    if (day2Opened) return; day2Opened = true;
-    document.querySelectorAll('.luma-checkout--overlay').forEach(function(o){ o.remove(); });
-    var t = document.createElement('div'); t.className = 'toast'; t.textContent = 'Day 1 saved. One more for Day 2.';
-    document.body.appendChild(t); requestAnimationFrame(function(){ t.classList.add('in'); });
-    setTimeout(function(){ t.classList.remove('in'); setTimeout(function(){ t.remove(); }, 400); }, 5000);
-    setTimeout(function(){ day2.click(); }, 350);
-  }
-  window.addEventListener('message', function(e){
-    if (e.origin !== 'https://luma.com' || !e.data || e.data.type !== 'luma:purchase') return;
-    var d = e.data; var txt = JSON.stringify(d);
-    if (txt.indexOf('yh6vAPBjduKOTRt') !== -1) return;   /* that was Day 2 itself */
-    day1Done = true; setTimeout(openDay2, 900);
-  });
-  new MutationObserver(function(muts){
-    muts.forEach(function(m){ m.removedNodes.forEach(function(n){
-      if (n.nodeType === 1 && n.classList && n.classList.contains('luma-checkout--overlay') && day1Done && !day2Opened) openDay2();
-    }); });
-  }).observe(document.body, { childList: true });
+  /* registration steps: Day 1, then Day 2, then the WhatsApp channel */
+  (function(){
+    var D1 = 'evt-XAeX6PX6wDDRrHP', D2 = 'evt-yh6vAPBjduKOTRt';
+    var root = document.documentElement, steps = document.getElementById('steps'), card = steps.querySelector('.steps-card');
+    var title = document.getElementById('stepsTitle'), body = document.getElementById('stepsBody');
+    var bDay2 = document.getElementById('stepsDay2'), aCh = document.getElementById('stepsChannel');
+    var bBack1 = document.getElementById('stepsBack1'), bBack2 = document.getElementById('stepsBack2');
+    var items = steps.querySelectorAll('.steps-list li');
+    var st = { d1: false, d2: false, ch: false }, last = null, lastFocus = null;
+    try { var saved = JSON.parse(localStorage.getItem('gtm-steps') || '{}'); st.d1 = !!saved.d1; st.d2 = !!saved.d2; st.ch = !!saved.ch; } catch (e) {}
+    function save(){ try { localStorage.setItem('gtm-steps', JSON.stringify(st)); } catch (e) {} }
+
+    function show(step){
+      var sure;
+      if (step === 2) {
+        sure = st.d1;
+        title.textContent = sure ? 'Day 1 is saved. Now save Day 2.' : 'Next, save your seat for Day 2.';
+        body.textContent = 'Saturday 26 September, 7 to 9pm WAT. Day 2 is a separate registration, so Luma reminds you about both days.';
+      } else {
+        sure = st.d2;
+        title.textContent = sure ? "You're in for both days." : 'Next, join the WhatsApp channel.';
+        body.textContent = 'Join my WhatsApp channel. I post class updates and AI tips there.';
+      }
+      bDay2.hidden = step !== 2;
+      bBack1.hidden = !(step === 2 && !st.d1);
+      aCh.hidden = step !== 3;
+      bBack2.hidden = !(step === 3 && !st.d2);
+      [st.d1, st.d2, st.ch].forEach(function(done, k){
+        items[k].classList.toggle('done', done);
+        items[k].classList.toggle('now', k + 1 === step && !done);
+      });
+      if (steps.hidden) {
+        lastFocus = document.activeElement;
+        steps.hidden = false;
+        root.classList.add('steps-open');
+        if (!reduce) {
+          var mobile = innerWidth < 760;
+          card.animate(mobile ? [{ transform: 'translateY(100%)' }, { transform: 'none' }] : [{ opacity: 0, transform: 'translate(-50%,-46%)' }, { opacity: 1, transform: 'translate(-50%,-50%)' }], { duration: 320, easing: 'cubic-bezier(.32,.72,0,1)' });
+          steps.querySelector('.steps-back').animate([{ opacity: 0 }, { opacity: 1 }], { duration: 240, easing: 'ease-out' });
+        }
+      }
+      (step === 2 ? bDay2 : aCh).focus({ preventScroll: true });
+    }
+    function hide(){
+      if (steps.hidden) return;
+      steps.hidden = true;
+      root.classList.remove('steps-open');
+      if (lastFocus && lastFocus.focus && !steps.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+    }
+
+    document.addEventListener('click', function(e){
+      var el = e.target.closest ? e.target.closest('[data-luma-event-id]') : null;
+      if (!el) return;
+      var id = el.getAttribute('data-luma-event-id'), inSteps = steps.contains(el);
+      if (!inSteps && id === D1 && st.d1) { e.preventDefault(); e.stopPropagation(); show(st.d2 ? 3 : 2); return; }
+      if (inSteps) hide();
+      last = id;
+    }, true);
+
+    addEventListener('message', function(e){
+      if (e.origin !== 'https://luma.com' || !e.data || e.data.type !== 'luma:purchase') return;
+      var txt = JSON.stringify(e.data), which = txt.indexOf(D2) !== -1 ? D2 : txt.indexOf(D1) !== -1 ? D1 : last;
+      if (which === D2) st.d2 = true; else st.d1 = true;
+      save();
+      setTimeout(function(){ document.querySelectorAll('.luma-checkout--overlay').forEach(function(o){ o.remove(); }); }, 1400);
+    });
+
+    new MutationObserver(function(muts){
+      muts.forEach(function(m){ m.removedNodes.forEach(function(n){
+        if (n.nodeType !== 1 || !n.classList || !n.classList.contains('luma-checkout--overlay')) return;
+        var was = last; last = null;
+        if (was === D1) show(2); else if (was === D2) show(3);
+      }); });
+    }).observe(document.body, { childList: true });
+
+    aCh.addEventListener('click', function(){ st.ch = true; save(); setTimeout(hide, 300); });
+    steps.addEventListener('click', function(e){ if (e.target.closest('[data-close]')) hide(); });
+    addEventListener('keydown', function(e){ if (!steps.hidden && e.key === 'Escape') hide(); });
+  })();
 
 })();
 </script>
