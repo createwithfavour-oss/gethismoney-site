@@ -20,9 +20,12 @@ Last updated 17 Sep 2026.
 Floating "Save my free seat" bar after the hero.
 After each Luma form closes, a step sheet shows the next step: Day 2 seat, then the WhatsApp channel.
 
+## Done 17 Sep
+
+- Luma confirmation emails for both events now carry the other day's link and the WhatsApp channel link (Favour pasted them).
+
 ## Open
 
-- Paste the confirmation email text into both Luma events (Manage Event, Registration tab). Text is in the PM board.
 - Do one real registration on a phone to confirm Luma sends its completion signal (the sheet then says "Day 1 is saved").
 - Luma Day 2 event: confirm it says 7pm.
 - Saturday calendar reminder and Hermione's WhatsApp drafts still say 6pm. The 1:1 draft still mentions the paid course.
