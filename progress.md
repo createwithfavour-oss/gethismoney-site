@@ -7,7 +7,7 @@ Last updated 17 Sep 2026.
 - https://gethismoney.xyz/ship-with-ai (also www, and gethismoney-site.createwithfavour.workers.dev). The root redirects to the page.
 - Repo: github.com/createwithfavour-oss/gethismoney-site, branch `main`.
 - Deploy: `npx wrangler@4 deploy` from this folder. Pushing to GitHub does not deploy until Workers Builds is connected (see Open).
-- Verified live at phone width on 17 Sep: no sideways scroll, "Save my free seat" opens Luma's Day 1 form, Day 2 opens after Day 1, presenter ad plays with sound.
+- 17 Sep: the registration button did nothing until the Luma script tag got `id="luma-checkout"` (see devlog). Now the Day 1 form visibly opens on phone and desktop. A full registration, and Day 2 opening after it, is still untested.
 
 ## Page, top to bottom
 

@@ -4,6 +4,8 @@ Newest first. What was built, what was tried and dropped, and anything a later s
 
 ## 17 Sep 2026
 
+**Registration button was broken since launch.** Luma's `checkout-button.js` finds its own origin through `document.getElementById("luma-checkout")`. Our script tag had no id, so the stylesheet loaded from `gethismoney.xyz/checkout-button.css` (404) and the overlay rendered unstyled at the bottom of the page, invisible. Earlier checks only tested that the overlay element existed. Fix: `<script id="luma-checkout" ...>`. Now verified by checking the modal is fixed, on screen, and the element at the centre of the viewport is the Luma iframe.
+
 **Count-up on stats.** `[data-count]` numbers start at zero and count up once when 60% visible (1.6s, ease-out, 150ms stagger), keeping `data-prefix` and `data-suffix`. The HTML holds the final values, so no-JS and reduced motion show them directly. TrustVerifi label now says "users".
 
 **Stat badges.** Replaced the two proof statements with a three-item stat row (`.stats`): 190 / 56,000+ / $100K+, each with its logo and a one-line label. Three columns with hairline dividers on desktop, three rows with the number on the left on phones.
