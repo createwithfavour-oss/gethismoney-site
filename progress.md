@@ -14,7 +14,7 @@ Last updated 17 Sep 2026.
 1. Hero: black-and-white photo, label, headline, body, two-row schedule (both days 7 to 9pm WAT), button.
 2. Day 1: date line, heading, three-paragraph intro, list with progress rail.
 3. Day 2: same layout, mirrored on desktop.
-4. Work: three stat badges, intro, six-tile grid with click-to-preview (full videos with sound).
+4. Work: three stat badges (190 users, 56,000+ ad impressions, $100K+ on Upwork), intro, six-tile grid with click-to-preview (full videos with sound).
 5. Closing band: heading, button, add-to-calendar links, pointer glow.
 6. Footer.
 Floating "Save my free seat" bar after the hero.

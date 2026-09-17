@@ -4,7 +4,7 @@ Newest first. Each line says what was decided and why. The PM board in Notion ("
 
 ## 17 Sep 2026
 
-- **Proof is three stat badges, not sentences.** 190 accounts created on TrustVerifi, 56,000+ ad impressions, $100K+ on Upwork. Two plain statements with logos made no sense without a heading. Numbers come from the TrustVerifi ads report (11 Aug to 3 Sep). The ads report has no video view count, so the badge says "times my TrustVerifi video ads were shown", not views.
+- **Proof is three stat badges, not sentences.** 190 users on TrustVerifi (190 accounts created in the ads report), 56,000+ ad impressions, $100K+ on Upwork. Two plain statements with logos made no sense without a heading. Numbers come from the TrustVerifi ads report (11 Aug to 3 Sep). The ads report has no video view count, so the badge says "times my TrustVerifi video ads were shown", not views.
 - **Intro copy under each day is three short paragraphs.** One block read as cramped. Lead and closing lines in full ink at 500 weight, middle line in soft ink.
 - **Supporting text uses a soft ink (`--ink-soft`), not the grey.** Favour said the grey was almost invisible next to the bold lead. Contrast went from 7.9:1 to 13.3:1 in dark mode.
 - **On phones, Day 1 and Day 2 have no in-section button.** The floating "Save my free seat" bar covers them, and two identical buttons on one screen breaks the one-main-action rule.
