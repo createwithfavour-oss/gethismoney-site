@@ -5,7 +5,7 @@ Newest first. Each line says what was decided and why. The PM board in Notion ("
 ## 18 Sep 2026
 
 - **Tiles for live sites carry a "Visit site" chip.** Only the two that are live and safe to name: `hire.trustverifi.com` and `samuelandkathryn.com`. The tile still opens the preview; the chip is a separate target.
-- **The ROI calculator gets no link.** Its URL is `augmentus-roi-finder.pages.dev`, which names Augmentus. Blocked on Favour deciding whether to name them or move the tool to a neutral domain.
+- **The ROI calculator links to `augmentus-roi-finder.pages.dev` as it is.** Favour's call, so the 16 Sep line about never naming Augmentus no longer holds for this link. The chip says "Try it", since the tool is something to use rather than a site to look at. Tile captions still say "a robotics company".
 
 ## 17 Sep 2026
 

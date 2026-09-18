@@ -27,11 +27,10 @@ After each Luma form closes, a step sheet shows the next step: Day 2 seat, then 
 
 ## Done 18 Sep
 
-- "Visit site" chips on the two work tiles whose sites are live: hire.trustverifi.com and samuelandkathryn.com.
+- Link chips on all three tiles that have something to open: augmentus-roi-finder.pages.dev ("Try it"), hire.trustverifi.com and samuelandkathryn.com.
 
 ## Open
 
-- The ROI calculator tile has no link because its URL (augmentus-roi-finder.pages.dev) names Augmentus. Decide: name them, move the tool to a neutral domain, or leave it unlinked.
 - Do one real registration on a phone to confirm Luma sends its completion signal (the sheet then says "Day 1 is saved").
 - Luma Day 2 event: confirm it says 7pm.
 - Saturday calendar reminder and Hermione's WhatsApp drafts still say 6pm. The 1:1 draft still mentions the paid course.

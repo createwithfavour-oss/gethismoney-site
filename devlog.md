@@ -4,7 +4,7 @@ Newest first. What was built, what was tried and dropped, and anything a later s
 
 ## 18 Sep 2026
 
-**Visit site buttons on the work tiles.** Tiles that show a live site carry `data-site` and a small "Visit site" chip bottom-right: 32px tall with a `::after` inset that grows the tap target to 44px, on the caption's own gradient. Two of them, `hire.trustverifi.com` and `samuelandkathryn.com`, both checked live. The tile click handler ignores clicks inside `.tile-site`, the keydown handler ignores events that did not start on the figure, and the preview's Tab trap now cycles through the close button, the sound button and the caption link. The preview caption appends the domain as a link. The ROI calculator has no button: it is live at `augmentus-roi-finder.pages.dev`, and that domain names Augmentus, who never replied to the pitch.
+**Visit site buttons on the work tiles.** Tiles that show a live site carry `data-site` and a small "Visit site" chip bottom-right: 32px tall with a `::after` inset that grows the tap target to 44px, on the caption's own gradient. Two of them, `hire.trustverifi.com` and `samuelandkathryn.com`, both checked live. The tile click handler ignores clicks inside `.tile-site`, the keydown handler ignores events that did not start on the figure, and the preview's Tab trap now cycles through the close button, the sound button and the caption link. The preview caption appends the domain as a link. The ROI calculator got a "Try it" chip to the same Cloudflare Pages URL after Favour chose to link it as it is, which means the domain names Augmentus.
 
 ## 17 Sep 2026
 
