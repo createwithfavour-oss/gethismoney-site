@@ -4,7 +4,7 @@ Newest first. What was built, what was tried and dropped, and anything a later s
 
 ## 28 Sep 2026
 
-**Tracking for the whole domain.** `track.js` here loads Google Analytics, PostHog and Microsoft Clarity once the page is idle, so it never slows the first paint. It is the only copy: `ship-with-ai.html` and `cohort.html` load `/track.js`, and HIT (hit.gethismoney.xyz) and the cohort page (`/ship-with-favour`) load `https://gethismoney.xyz/track.js`. The three IDs sit at the top of the file and each tool stays off while its ID is empty. Pages can send steps with `hitTrack("name")`; HIT sends its read, prompt, pitch and tip steps. Recordings hide typed text.
+**Tracking for the whole domain.** `track.js` here loads Google Analytics, PostHog and Microsoft Clarity on the first scroll, tap or key press, or 5 seconds after load, so it never competes with the page loading (idle-time loading cost HIT 650ms of blocking time on mobile). PostHog runs events only: its recorder, surveys, speed monitor and dead-click tracking are off because Clarity covers recordings. It is the only copy: `ship-with-ai.html` and `cohort.html` load `/track.js`, and HIT (hit.gethismoney.xyz) and the cohort page (`/ship-with-favour`) load `https://gethismoney.xyz/track.js`. The three IDs sit at the top of the file and each tool stays off while its ID is empty. Pages can send steps with `hitTrack("name")`; HIT sends its read, prompt, pitch and tip steps. Recordings hide typed text.
 
 ## 18 Sep 2026
 
