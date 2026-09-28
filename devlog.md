@@ -2,6 +2,10 @@
 
 Newest first. What was built, what was tried and dropped, and anything a later session would trip over.
 
+## 28 Sep 2026
+
+**Tracking for the whole domain.** `track.js` here loads Google Analytics, PostHog and Microsoft Clarity once the page is idle, so it never slows the first paint. It is the only copy: `ship-with-ai.html` and `cohort.html` load `/track.js`, and HIT (hit.gethismoney.xyz) and the cohort page (`/ship-with-favour`) load `https://gethismoney.xyz/track.js`. The three IDs sit at the top of the file and each tool stays off while its ID is empty. Pages can send steps with `hitTrack("name")`; HIT sends its read, prompt, pitch and tip steps. Recordings hide typed text.
+
 ## 18 Sep 2026
 
 **Visit site buttons on the work tiles.** Tiles that show a live site carry `data-site` and a small "Visit site" chip bottom-right: 32px tall with a `::after` inset that grows the tap target to 44px, on the caption's own gradient. Two of them, `hire.trustverifi.com` and `samuelandkathryn.com`, both checked live. The tile click handler ignores clicks inside `.tile-site`, the keydown handler ignores events that did not start on the figure, and the preview's Tab trap now cycles through the close button, the sound button and the caption link. The preview caption appends the domain as a link. The ROI calculator got a "Try it" chip to the same Cloudflare Pages URL after Favour chose to link it as it is, which means the domain names Augmentus.
